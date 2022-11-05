@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
+import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles'
 
 export const ContentWrapperStyled = styled(ContentWrapper)`
   margin-bottom: 100px;

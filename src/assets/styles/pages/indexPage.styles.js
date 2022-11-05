@@ -2,8 +2,8 @@ import styled, { keyframes } from 'styled-components'
 import { Link } from 'gatsby'
 import arrowIcon from 'assets/styles/arrow.svg'
 import { CornerEffect } from '../../../components/CornerEffectProvider/CornerEffect'
-import GoogleIcon from '../assets/icons/google.svg'
-import StarIcon from '../assets/icons/star.svg'
+import GoogleIcon from '../../icons/google.svg'
+import StarIcon from '../../icons/star.svg'
 
 export const StyledList = styled.ul`
   padding: 0;
