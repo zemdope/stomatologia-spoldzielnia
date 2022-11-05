@@ -8,7 +8,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   html {
+background-color: #f6f6f4;
+
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -24,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
   
   p, li, a {
     font-family: "Montserrat", sans-serif;
+    
     font-weight: 400;
     line-height: 1.5;
     font-size: 1.5rem;
