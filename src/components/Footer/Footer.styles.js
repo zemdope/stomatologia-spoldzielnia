@@ -8,11 +8,11 @@ export const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.color.beige};
 
   h4 {
-    font-family: ${({ theme }) => theme.font.family.montserrat};
-    font-weight: 600;
     grid-row: 1/2;
     margin-bottom: 20px;
     align-self: center;
+    font-family: ${({ theme }) => theme.font.family.montserrat};
+    font-weight: 600;
   }
 
   div:first-of-type {
@@ -22,9 +22,9 @@ export const StyledFooter = styled.footer`
     grid-column: 1/3;
 
     a {
+      margin: 10px 0;
       color: black;
       text-decoration: none;
-      margin: 10px 0;
       font-family: 'Intitled Sans', sans-serif;
       text-transform: uppercase;
       font-weight: 300;

@@ -13,7 +13,27 @@ import {
 
 const Zespol = ({ data }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper
+      initial={{
+        opacity: 0,
+        x: -300,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 300,
+      }}
+      transition={{
+        type: 'spring',
+        duration: 0.8,
+        stiffness: 75,
+
+        delay: 0.6,
+      }}
+    >
       <Hero imageSource={data.teammates.publicURL}>
         <h1>Poznajmy się</h1>
         <p>
@@ -99,16 +119,16 @@ const Zespol = ({ data }) => {
 
 export const query = graphql`
   query {
-    teammates: file(relativePath: { regex: "/14.jpg/" }) {
+    teammates: file(relativePath: { regex: "/team.jpeg/" }) {
       publicURL
     }
-    Olek: file(relativePath: { regex: "/4.jpg/" }) {
+    Olek: file(relativePath: { regex: "/olek.jpg/" }) {
       publicURL
     }
-    Tomek: file(relativePath: { regex: "/5.jpg/" }) {
+    Tomek: file(relativePath: { regex: "/Bartosz.jpg/" }) {
       publicURL
     }
-    Rafal: file(relativePath: { regex: "/6.jpg/" }) {
+    Rafal: file(relativePath: { regex: "/Konrad.jpg/" }) {
       publicURL
     }
   }

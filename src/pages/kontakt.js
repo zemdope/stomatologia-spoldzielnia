@@ -1,6 +1,6 @@
 import React from 'react'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
-import { graphql } from 'gatsby'
+
 import MailIcon from 'assets/icons/mail.svg'
 import AddressIcon from 'assets/icons/addressIcon.svg'
 import PhoneIcon from 'assets/icons/phone.svg'
@@ -14,10 +14,31 @@ import {
 import { ContactForm } from '../components/ContactForm/ContactForm'
 
 import SimpleMap from '../components/Maps/SimpleMap'
+import { AnimatePresence } from 'framer-motion'
 
-const Kontakt = ({ data }) => {
+const Kontakt = () => {
   return (
-    <ContactContentWrapper>
+    <ContactContentWrapper
+      initial={{
+        opacity: 0,
+        x: -300,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 300,
+      }}
+      transition={{
+        type: 'spring',
+        duration: 0.8,
+        stiffness: 75,
+
+        delay: 0.6,
+      }}
+    >
       <ContactInfoWrapper>
         <HighlightedHeading>Odwiedź nas</HighlightedHeading>
         <StyledListContact>
@@ -78,13 +99,5 @@ const Kontakt = ({ data }) => {
     </ContactContentWrapper>
   )
 }
-
-export const query = graphql`
-  query {
-    contactPhoto: file(relativePath: { regex: "/4.jpg/" }) {
-      publicURL
-    }
-  }
-`
 
 export default Kontakt

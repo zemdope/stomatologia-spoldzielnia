@@ -30,22 +30,50 @@ import {
   WrapperIcons,
 } from '../assets/styles/pages/IndexPage.styles'
 import { ContactForm } from '../components/ContactForm/ContactForm'
+import { AnimatePresence } from 'framer-motion'
 
 const IndexPage = ({ data }) => {
   return (
-    <>
-      <ContentWrapper>
+    <AnimatePresence>
+      <ContentWrapper
+        initial={{
+          opacity: 0,
+          x: -300,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        exit={{
+          opacity: 0,
+          x: 300,
+        }}
+        transition={{
+          type: 'spring',
+          duration: 0.8,
+          stiffness: 75,
+
+          delay: 0.6,
+        }}
+      >
         <Hero>
-          <HeroHeading
-            position="bottomLeft"
-            color="dark"
-            size="100px"
-            distance="30px"
-          >
-            <h1>Stomatolog Spółdzielnia Lekarska </h1>
-            <p>Gdańsk, wrzeszcz</p>
-          </HeroHeading>
-          <HeroImage imageSource={data.hero.publicURL} />
+          <HeroImage imageSource={data.hero.publicURL}>
+            <HeroHeading
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeIn',
+                delay: 1.5,
+              }}
+            >
+              <h1>
+                Stomatolog Spółdzielnia <br />
+                Lekarska{' '}
+              </h1>
+              <p>Gdańsk, wrzeszcz</p>
+            </HeroHeading>
+          </HeroImage>
         </Hero>
         <WelcomeSection>
           <WelcomeSectionContent
@@ -75,7 +103,14 @@ const IndexPage = ({ data }) => {
             imageSource={data.welcome.publicURL}
           />
         </WelcomeSection>
-        <AdvantagesSection>
+        <AdvantagesSection
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+          }}
+        >
           <HighlightedHeading width="50" isRight>
             Dlaczego szukasz właśnie nas?
           </HighlightedHeading>
@@ -118,9 +153,9 @@ const IndexPage = ({ data }) => {
           </div>
           <ShowcaseGallery>
             <ShowcaseImage src={data.grid1.publicURL} alt="#" />
-            <ShowcaseImage isBig src={data.grid2.publicURL} alt="#" />
+            <ShowcaseImage src={data.grid2.publicURL} alt="#" />
             <ShowcaseImage src={data.grid3.publicURL} alt="#" />
-            <ShowcaseImage isBig src={data.grid4.publicURL} alt="#" />
+            <ShowcaseImage src={data.grid4.publicURL} alt="#" />
             <ShowcaseCorner
               position="bottomLeft"
               size="100px"
@@ -197,8 +232,8 @@ const IndexPage = ({ data }) => {
           <TeamImage
             offset="700"
             position="bottomLeft"
-            size="70px"
-            distance="20px"
+            size="100px"
+            distance="30px"
             color="beige"
             imageSource={data.team.publicURL}
             alt=""
@@ -236,14 +271,14 @@ const IndexPage = ({ data }) => {
               </p>
               <p>Jacek</p>
 
-              <WrapperStar>
+              <WrapperIcons>
                 <StarIconStyled />
                 <StarIconStyled />
                 <StarIconStyled />
                 <StarIconStyled />
                 <StarIconStyled />
                 <GoogleIconStyled />
-              </WrapperStar>
+              </WrapperIcons>
             </StyledReview>
             <StyledReview>
               <p>
@@ -265,34 +300,34 @@ const IndexPage = ({ data }) => {
         </ReviewsSection>
         <ContactForm />
       </ContentWrapper>
-    </>
+    </AnimatePresence>
   )
 }
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { regex: "/10.jpeg/" }) {
+    hero: file(relativePath: { regex: "/herrro.jpg/" }) {
       publicURL
     }
-    welcome: file(relativePath: { regex: "/1.jpg/" }) {
+    welcome: file(relativePath: { regex: "/obsluga.jpeg/" }) {
       publicURL
     }
-    grid1: file(relativePath: { regex: "/11.jpg/" }) {
+    grid1: file(relativePath: { regex: "/grid1.jpeg/" }) {
       publicURL
     }
-    grid2: file(relativePath: { regex: "/12.jpg/" }) {
+    grid2: file(relativePath: { regex: "/grid2.jpeg/" }) {
       publicURL
     }
-    grid3: file(relativePath: { regex: "/13.jpg/" }) {
+    grid3: file(relativePath: { regex: "/grid4.jpeg/" }) {
       publicURL
     }
-    grid4: file(relativePath: { regex: "/14.jpg/" }) {
+    grid4: file(relativePath: { regex: "/grid3.jpeg/" }) {
       publicURL
     }
-    team: file(relativePath: { regex: "/7.jpg/" }) {
+    team: file(relativePath: { regex: "/team.jpeg/" }) {
       publicURL
     }
-    team2: file(relativePath: { regex: "/3.jpg/" }) {
+    team2: file(relativePath: { regex: "/TeamSectionPhoto.jpg/" }) {
       publicURL
     }
   }

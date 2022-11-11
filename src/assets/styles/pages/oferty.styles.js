@@ -1,20 +1,19 @@
 import styled from 'styled-components'
 
-// TODO: Find perfect name 😂
 export const Welcome = styled.div`
   ${({ theme }) => theme.mq.desktop} {
+    margin: 0 auto 40px;
     text-align: center;
     max-width: 500px;
-    margin: 0 auto 40px;
   }
 `
 
 export const FiltersList = styled.ul`
-  margin: 0 0 50px;
-  padding: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin: 0 0 50px;
+  padding: 0;
   width: 100%;
   align-items: flex-start;
 
@@ -23,7 +22,6 @@ export const FiltersList = styled.ul`
     font-weight: 700;
   }
 
-  // TODO: remove after implementing state
   li:first-child {
     text-decoration: underline;
   }

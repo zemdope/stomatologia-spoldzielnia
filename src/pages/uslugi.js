@@ -8,25 +8,44 @@ import {
   HeroInfo,
   StyledIcon,
   StyledIcon2,
-  HeroImage,
   ServicesStyledList,
 } from '../assets/styles/pages/uslugi.styles'
 
 const Uslugi = ({ data }) => {
   return (
-    <ContentWrapper>
-      <Hero>
-        <h1>Sprawdź co możemy zaoferować naszym pacjentom</h1>
-        <HeroImage src={data.teamSurgery.publicURL} alt="" />
-        <HeroInfo>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, a
-            nobis sequi laborum delectus consectetur aliquam quisquam dolorum
-            voluptas? Quis!
-          </p>
-          <a href="#szczegoly">Czytaj dalej</a>
-        </HeroInfo>
+    <ContentWrapper
+      initial={{
+        opacity: 0,
+        x: -300,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 300,
+      }}
+      transition={{
+        type: 'spring',
+        duration: 0.8,
+        stiffness: 75,
+
+        delay: 0.6,
+      }}
+    >
+      <Hero imageSource={data.uslugi.publicURL}>
+        <h1>Sprawdź co oferujemy naszym pacjentom</h1>
       </Hero>
+      <HeroInfo>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, a nobis
+          sequi laborum delectus consectetur aliquam quisquam dolorum voluptas?
+          Quis!
+        </p>
+        <a href="#szczegoly">Czytaj dalej</a>
+      </HeroInfo>
+
       <HighlightedHeading id="szczegoly">
         Jak możemy Ci pomóc?
       </HighlightedHeading>
@@ -74,7 +93,7 @@ const Uslugi = ({ data }) => {
 
 export const query = graphql`
   query {
-    teamSurgery: file(relativePath: { regex: "/16.jpg/" }) {
+    uslugi: file(relativePath: { regex: "/heroUslugi.jpg/" }) {
       publicURL
     }
   }

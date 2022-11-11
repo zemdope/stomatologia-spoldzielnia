@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-  background-image: url("${({ imageSource }) => imageSource}");
-  background-size: cover;
-  background-position: 10% 0;
-  width: calc(100% + 40px);
+width: calc(100% + 40px);
   margin-left: -20px;
   height: 90vh;
   display: flex;
@@ -12,13 +9,18 @@ export const Hero = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 50px;
+background:linear-gradient(
+   to top,
+  rgb(0 0 0 / .4), rgb(0 0 0 / 0)) ,url("${({ imageSource }) => imageSource}");
+  background-size: cover;
+  background-position: 50% 0;
+  
   h1 {
     font-size: ${({ theme }) => theme.font.size.heading};
     margin: 0;
   }
   h1, p {
     color: white;
-    text-shadow: 0 0 20px black;
   }
   
   ${({ theme }) => theme.mq.desktop} {
@@ -61,18 +63,17 @@ export const InfoItem = styled.article`
 `
 
 export const StyledLink = styled.a`
-  border: 1px solid ${({ theme }) => theme.color.dark};
-  background-color: transparent;
-  font-size: ${({ theme }) => theme.font.size.button};
-  font-family: ${({ theme }) => theme.font.family.montserrat};
-  padding: 20px 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-
   display: block;
   justify-content: center;
   max-width: 400px;
   margin: 8px 10px;
+  padding: 20px 15px;
+  border: 1px solid ${({ theme }) => theme.color.dark};
+  background-color: transparent;
+  font-size: ${({ theme }) => theme.font.size.button};
+  font-family: ${({ theme }) => theme.font.family.montserrat};
+  font-weight: 500;
+  text-transform: uppercase;
   color: black;
   text-decoration: none;
 `
@@ -81,11 +82,11 @@ export const InfoItemContent = styled.div`
     margin: 10px 0;
   }
   p:first-of-type {
+    margin: 0 0 30px 0;
     text-transform: uppercase;
     font-size: ${({ theme }) => theme.font.size.thumbnailSmall};
     font-weight: 500;
     color: ${({ theme }) => theme.color.darkBeige};
-    margin: 0 0 30px 0;
   }
   a {
     display: flex;

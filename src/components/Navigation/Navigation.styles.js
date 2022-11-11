@@ -1,6 +1,7 @@
-import styled, { keyframes } from 'styled-components'
-import Logo from 'assets/icons/logo.svg'
+import Logo from '../../assets/icons/logo.svg'
 import { StyledIcon } from '../StyledIcon/StyledIcon'
+import { motion } from 'framer-motion'
+import styled from 'styled-components'
 
 export const OuterWrapper = styled.div`
   display: flex;
@@ -58,40 +59,45 @@ export const StyledBurger = styled.button`
   }
 `
 
-export const Wrapper = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
-
+export const Wrapper = styled(motion.div)`
+  display: flex;
+  will-change: transform;
   flex-direction: column;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #f7f7f4;
+  background-color: #f6f6f4;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-
-  transition: opacity 0.3s ease-in-out;
+  transform: ${({ isOpen }) =>
+    isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+  transition: all 400ms ease-out;
 
   ${({ theme }) => theme.mq.desktop} {
-    position: static;
+    display: none;
+  }
+`
+export const WrapperDesktop = styled(Wrapper)`
+  display: none;
+  background-color: #f6f6f4;
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 5px 45px;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: unset;
-    background-color: transparent;
-    padding: 25px 45px;
-    opacity: 1;
-    transition: all 0s;
+    transform: none;
   }
 `
 export const StyledLogo = styled(Logo)`
-  width: ${({ isSmall }) => (isSmall ? '60px' : '65px')};
-  height: ${({ isSmall }) => (isSmall ? '60px' : '65px')};
+  width: 60px;
+  height: 60px;
 
   ${({ theme }) => theme.mq.desktop} {
-    display: ${({ isMobile }) => (isMobile ? 'none' : 'initial')};
     margin-right: 40px;
   }
 `
@@ -116,18 +122,18 @@ export const StyledNavigation = styled.nav`
 
   li {
     :nth-child(1) a {
-      font-weight: 500;
+      font-weight: 600;
       min-width: 150px;
       position: relative;
+      color: ${({ theme }) => theme.color.dark};
     }
     a {
       display: inline-block;
       padding: 25px;
-      /* font-family:${({ theme }) => theme.font.family.cormorant} */
-      font-family: "Intitled Sans", sans-serif;
-      font-weight:300;
+      font-family: 'Intitled Sans', sans-serif;
+      font-weight: 300;
       text-transform: uppercase;
-    letter-spacing: 1px;
+      letter-spacing: 1px;
       color: black;
       text-decoration: none;
       font-size: ${({ theme }) => theme.font.size.paragraph};

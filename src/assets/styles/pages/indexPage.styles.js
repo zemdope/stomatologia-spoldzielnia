@@ -4,16 +4,16 @@ import arrowIcon from 'assets/styles/arrow.svg'
 import { CornerEffect } from '../../../components/CornerEffectProvider/CornerEffect'
 import GoogleIcon from '../../icons/google.svg'
 import StarIcon from '../../icons/star.svg'
-
+import { motion } from 'framer-motion'
 export const StyledList = styled.ul`
   padding: 0;
   list-style: none;
   li {
     margin: 30px 0;
     h3 {
+      margin: 0;
       font-family: ${({ theme }) => theme.font.family.montserrat};
       font-weight: 700;
-      margin: 0;
     }
   }
 
@@ -24,65 +24,42 @@ export const StyledList = styled.ul`
   }
 `
 
-export const StyledButton = styled.button`
-  border: 1px solid ${({ theme }) => theme.color.dark};
-  background-color: transparent;
-  font-size: ${({ theme }) => theme.font.size.button};
-  font-family: ${({ theme }) => theme.font.family.montserrat};
-  padding: 10px 15px;
-  font-weight: 500;
-  text-transform: uppercase;
+export const StyledButton = styled(motion.button)`
   display: block;
   margin: 8px 15px;
+  padding: 10px 15px;
+  font-size: ${({ theme }) => theme.font.size.button};
+  font-family: ${({ theme }) => theme.font.family.montserrat};
+  border: 1px solid ${({ theme }) => theme.color.dark};
+  background-color: transparent;
+  font-weight: 500;
+  text-transform: uppercase;
   color: black;
   text-decoration: none;
 `
 
 export const StyledLinkButton = styled(Link)`
+position: relative;
+  display: inline-block;
+  margin: 5px 0 10px;
   font-family: ${({ theme }) => theme.font.family.montserrat};
   font-size: ${({ theme }) => theme.font.size.paragraph};
   color: ${({ theme }) => theme.color.dark};
   text-decoration: underline;
-  position: relative;
-  display: inline-block;
-  margin: 5px 0 10px;
+  
   
   &::after {
     position: absolute;
+     right: -35px;
+    top: 50%;
     content: '';
+    width: 20px;
+    height: 20px;
     background-image: url("${arrowIcon}");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 50%;
-    width: 20px;
-    height: 20px;
-    right: -35px;
-    top: 50%;
     transform: translateY(-50%);
-  }
-`
-const photoTransform = keyframes`
-0%{
- transform: translateY(0%);
-  }
-  100%{
-   transform: translateY(90%);
-  }
-`
-const photoTransformDesktop = keyframes`
-0%{
- transform: translateX(0%);
-  }
-  100%{
-   transform: translateX(100%);
-  }
-`
-const appearHeading = keyframes`
-0%{
- opacity: 0;
-  }
-  100%{
-   opacity: 1;
   }
 `
 
@@ -90,13 +67,14 @@ export const Hero = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 85vh;
-  margin-bottom: 120px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 130px;
+  height: 80vh;
 
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: row;
-    height: 40vh;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 
   ${({ theme }) => theme.mq.desktop} {
@@ -106,72 +84,58 @@ export const Hero = styled.div`
 `
 
 export const HeroImage = styled.div`
-  background-image: url("${({ imageSource }) => imageSource}");
+position: relative;
+width: calc(100% + 40px);
+   margin-left:-20px;
+   margin-right:-20px;
+  max-width: 1200px;
+  height: 100%;
+  background:linear-gradient(
+   to right,
+  rgb(0 0 0 / .82), rgb(0 0 0 / 0)) ,url("${({ imageSource }) => imageSource}");
   background-position: 50% 100%;
   background-size: cover;
-  width: 100%;
-  height: 50%;
-  position:absolute;
-  top: 0;
-  left: 0;
-  transform: translate(0%);
-  animation: ${photoTransform} 1s ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
-
+  opacity: 1;
   
-
-  
-  ${({ theme }) => theme.mq.mobileLandscape} {
-   height: 100%;
-  }
-
-  ${({ theme }) => theme.mq.tabletAnimation} {
-  width: 50%;
-  animation: ${photoTransformDesktop} 1s ease;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
-  }
-  
-  ${({ theme }) => theme.mq.desktop} {
-    opacity: 1;
+ ${({ theme }) => theme.mq.desktop} {
+    height: 800px;
+    width: 100%;
+    margin: 0 auto;
   }
 `
 
-export const HeroHeading = styled.div`
+export const HeroHeading = styled(motion.div)`
+  position: absolute;
+  top: 55%;
+  left: 5%;
   opacity: 0;
-  height: 40%;
-  animation: ${appearHeading} 1s ease 2s;
-  animation-fill-mode: forwards;
+  height: 50%;
+  z-index: 3;
 
   h1 {
-    font-size: ${({ theme }) => theme.font.size.headingMobile};
+    font-size: ${({ theme }) => theme.font.size.headingSmall};
     margin: 0;
-    width: 90%;
+    width: 80%;
+    color: white;
   }
 
   p {
     max-width: 50%;
+    color: white;
+  }
+
+  ${({ theme }) => theme.mq.mobileLandscape} {
+    top: 10%;
   }
 
   ${({ theme }) => theme.mq.tabletAnimation} {
-    width: 50%;
-
     h1 {
-      width: 75%;
-      font-size: ${({ theme }) => theme.font.size.heading};
+      font-size: ${({ theme }) => theme.font.size.headingMobile};
     }
   }
-  ${({ theme }) => theme.mq.desktop} {
-    &::after {
-      content: '';
-      height: 1px;
-      width: 100%;
-      position: absolute;
-      bottom: 25%;
-      background-color: ${({ theme }) => theme.color.steel};
-      transform: translateY(-50px);
-    }
+
+  ${({ theme }) => theme.mq.tablet} {
+    top: 20%;
   }
 `
 
@@ -187,11 +151,11 @@ export const WelcomeSection = styled(StyledSection)`
   padding: 0 20px;
 
   ${({ theme }) => theme.mq.desktop} {
-    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
     margin: 180px 0 150px;
+    width: 100%;
   }
 
   ${({ theme }) => theme.mq.bigDesktop} {
@@ -202,6 +166,7 @@ export const WelcomeSection = styled(StyledSection)`
 export const WelcomeSectionContent = styled(CornerEffect)`
   background-color: ${({ theme }) => theme.color.dark};
   padding: 30px 20px;
+  width: 90%;
   position: relative;
   h2 {
     margin: 0 0 20px 0;
@@ -216,11 +181,11 @@ export const WelcomeSectionContent = styled(CornerEffect)`
 
   ${({ theme }) => theme.mq.desktop} {
     position: absolute;
-    width: 50%;
-    top: 100px;
+    width: 45%;
+    top: 150px;
+    right: 20px;
     height: auto;
     padding: 50px;
-    right: 20px;
 
     h2 {
       font-size: ${({ theme }) => theme.font.size.headingSmall};
@@ -233,14 +198,15 @@ export const WelcomeSectionContent = styled(CornerEffect)`
 `
 
 export const WelcomeSectionImage = styled(CornerEffect)`
-  margin-top: 10px;
-  width: 90%;
-  height: 170px;
   position: relative;
+  margin-top: 10px;
+  width: 75%;
+  height: 250px;
+
   background-image: url("${({ imageSource }) => imageSource}");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 80%;
+  background-position: 80% 20%;
   
   ${({ theme }) => theme.mq.desktop} {
     z-index: -1;
@@ -260,9 +226,9 @@ export const AdvantagesSection = styled(StyledSection)`
 
 export const ShowcaseSection = styled(StyledSection)`
   h2 {
+    margin: 30px 0 10px;
     font-size: ${({ theme }) => theme.font.size.headingMobile};
     text-align: center;
-    margin: 30px 0 10px;
   }
   div:nth-child(2) {
     display: flex;
@@ -288,25 +254,32 @@ export const ShowcaseGallery = styled.div`
   width: 98%;
 
   position: relative;
+  img:nth-child(4) {
+    display: none;
+  }
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.tablet} {
     margin: 50px 0 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 25px;
     position: relative;
+    grid-template-areas:
+      'first second'
+      'third fourth';
     img:nth-child(1) {
-      grid-row: 1 / 2;
+      grid-area: first;
     }
     img:nth-child(2) {
-      grid-row: 1 / 3;
+      grid-area: second;
     }
     img:nth-child(3) {
-      grid-row: 2 / 4;
+      grid-area: third;
     }
     img:nth-child(4) {
-      grid-row: 3 / 4;
+      display: block;
+      grid-area: fourth;
     }
   }
 `
@@ -320,12 +293,12 @@ export const ShowcaseCorner = styled(CornerEffect)`
 `
 
 export const ShowcaseImage = styled.img`
-  width: 100%;
-  height: ${({ isBig }) => (isBig ? '250px' : '125px')};
-  object-fit: cover;
   margin: 10px 0;
+  width: 100%;
+  height: ${({ isBig }) => (isBig ? '250px' : '250px')};
+  object-fit: cover;
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.tablet} {
     height: 100%;
     margin: 0;
   }
@@ -359,11 +332,12 @@ export const ServicesSection = styled(StyledSection)`
 
 export const TeamImage = styled(CornerEffect)`
   margin-top: 30px;
-  width: 90%;
+  width: 100%;
   height: 300px;
   background-image: url("${({ imageSource }) => imageSource}");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 50%;
 `
 
 export const TeamSection = styled(StyledSection)`
@@ -388,8 +362,9 @@ export const TeamSection = styled(StyledSection)`
     ${TeamImage}:nth-child(2) {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
-      width: 50%;
+      width: 80%;
       justify-self: end;
+      min-height: 300;
     }
 
     ${TeamImage}:last-child {
@@ -397,6 +372,7 @@ export const TeamSection = styled(StyledSection)`
       grid-row: 1 / 3;
       grid-column: 2 / 3;
       display: block;
+      max-width: 670px;
     }
   }
 `
@@ -426,9 +402,9 @@ export const ReviewsSection = styled(StyledSection)`
 
 export const StyledReview = styled.div`
   position: relative;
-  border: 1px solid ${({ theme }) => theme.color.steel};
-  padding: 40px 40px 20px;
   margin: 30px 0;
+  padding: 40px 40px 20px;
+  border: 1px solid ${({ theme }) => theme.color.steel};
 
   p:last-child {
     margin-top: 30px;
@@ -446,7 +422,6 @@ export const StarIconStyled = styled(StarIcon)`
 `
 export const WrapperIcons = styled.div`
   position: absolute;
-
   bottom: 20px;
   right: 20px;
   ${GoogleIconStyled} {

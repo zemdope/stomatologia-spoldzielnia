@@ -11,6 +11,7 @@ import {
   StyledSocialIcon,
   Wrapper,
   SocialIconWrapper,
+  WrapperDesktop,
 } from './Navigation.styles'
 
 export const Navigation = () => {
@@ -30,6 +31,7 @@ export const Navigation = () => {
         <span></span>
         <span></span>
       </StyledBurger>
+
       <Wrapper isOpen={isOpen}>
         <Link onClick={toggleNavigation} to="/">
           <StyledLogo />
@@ -45,6 +47,7 @@ export const Navigation = () => {
                 Umów Wizytę
               </a>
             </li>
+
             <li>
               <Link onClick={toggleNavigation} to="/uslugi">
                 Usługi
@@ -60,11 +63,11 @@ export const Navigation = () => {
                 Zespół
               </Link>
             </li>
-            <li>
-              <Link onClick={toggleNavigation} to="/realizacje">
+            {/* <li>
+               <Link onClick={toggleNavigation} to="/realizacje">
                 Realizacje
-              </Link>
-            </li>
+              </Link> 
+            </li> */}
             <li>
               <Link onClick={toggleNavigation} to="/kontakt">
                 Kontakt
@@ -81,6 +84,59 @@ export const Navigation = () => {
           </StyledSocialIcon>
         </SocialIconWrapper>
       </Wrapper>
+
+      <WrapperDesktop isOpen={isOpen}>
+        <Link onClick={toggleNavigation} to="/">
+          <StyledLogo isSmall />
+        </Link>
+
+        <StyledNavigation>
+          <ul>
+            <li>
+              <a
+                href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
+                onClick={toggleNavigation}
+              >
+                Umów Wizytę
+              </a>
+            </li>
+
+            <li>
+              <Link onClick={toggleNavigation} to="/uslugi">
+                Usługi
+              </Link>
+            </li>
+            <li>
+              <Link onClick={toggleNavigation} to="/cennik">
+                Cennik
+              </Link>
+            </li>
+            <li>
+              <Link onClick={toggleNavigation} to="/zespol">
+                Zespół
+              </Link>
+            </li>
+            {/* <li>
+              <Link onClick={toggleNavigation} to="/realizacje">
+                Realizacje
+              </Link>
+            </li> */}
+            <li>
+              <Link onClick={toggleNavigation} to="/kontakt">
+                Kontakt
+              </Link>
+            </li>
+          </ul>
+        </StyledNavigation>
+        <SocialIconWrapper>
+          <StyledSocialIcon isDark>
+            <FacebookIcon />
+          </StyledSocialIcon>
+          <StyledSocialIcon isDark>
+            <InstagramIcon />
+          </StyledSocialIcon>
+        </SocialIconWrapper>
+      </WrapperDesktop>
     </OuterWrapper>
   )
 }

@@ -5,51 +5,68 @@ import arrowIcon from '../arrow.svg'
 import { StyledList } from './IndexPage.styles'
 
 export const Hero = styled.div`
-  position: relative;
+ width: calc(100% + 40px);
+  margin-left: -20px;
+  height: 85vh;
   display: flex;
+  
+  justify-content: flex-end;
   flex-direction: column;
-  justify-content: space-between;
-  height: 80vh;
-  margin-bottom: 100px;
+  padding-bottom: 50px;
+  background:linear-gradient(
+   to top,
+  rgb(0 0 0 / .82), rgb(0 0 0 / 0)) ,url("${({ imageSource }) => imageSource}");
+  background-size: cover;
+  background-position: 50% 0;
+  text-align: center;
+ 
   h1 {
-    margin: 0;
-    font-size: ${({ theme }) => theme.font.size.heading};
+    width: 60%;
+    margin: 0 auto 0px auto;
+    font-size: ${({ theme }) => theme.font.size.headingSmall};
+    color: white;
+    text-shadow: 0 0 20px black;
+    
   }
 
-  ${({ theme }) => theme.mq.tablet} {
-    height: 40vh;
-  }
+  ${({ theme }) => theme.mq.tabletAnimation} {
 
+ h1 {
+    font-size: ${({ theme }) => theme.font.size.headingMobile};
+    
+  }
+  }
+  
   ${({ theme }) => theme.mq.desktop} {
-    height: ${({ theme }) => theme.size.desktopHeroHeight};
-    justify-content: flex-end;
+    height: 800px;
+    width: calc(100% + 200px);
+    margin-left: -100px;
 
-    h1 {
-      background-color: hsla(0, 100%, 100%, 0.6);
-      padding: 30px 20px;
-      max-width: 550px;
-      margin-bottom: 380px;
-    }
+   
   }
 `
 
 export const HeroInfo = styled.div`
+margin-bottom: 100px;
+margin-top: 100px;
   a {
-    color: black;
-    font-weight: 700;
+    
     position: relative;
     left: 30px;
+    color: black;
+    font-weight: 700;
     &::before {
       position: absolute;
+       width: 20px;
+      height: 20px;
+      left: -30px;
+      top: 50%;
       content: '';
       background-image: url("${arrowIcon}");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 0 50%;
-      width: 20px;
-      height: 20px;
-      left: -30px;
-      top: 50%;
+     
       transform: translateY(-50%) rotate(90deg);
     }
   }
@@ -62,11 +79,12 @@ export const HeroInfo = styled.div`
     
     &::before {
       content: '';
-      height: 1px;
-      width: 100%;
       position: absolute;
+      height: 1px;
+      width: 90%;
+      max-width: 1360px;
       background-color: ${({ theme }) => theme.color.steel};
-      transform: translateY(-50px);
+      transform: translate(75px,-50px);
     }
     
     p {
@@ -79,16 +97,16 @@ export const HeroInfo = styled.div`
 `
 
 export const HeroImage = styled.img`
+width: 90%;
+  height: 60%;
+  position: absolute;
+  top: 15%;
+  right: 0;
   background-image: url("${({ imageSource }) => imageSource}");
   background-position: 50% 50%;
   background-size: cover;
-  width: 90%;
-  height: 60%;
-  position: absolute;
   z-index: -1;
-  top: 15%;
-  right: 0;
-  opacity: 0.8;
+  opacity: 1;
   
   ${({ theme }) => theme.mq.tablet} {
     width: 70%;

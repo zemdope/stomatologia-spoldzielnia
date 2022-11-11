@@ -13,7 +13,7 @@ export const Footer = () => (
       <Link to="/uslugi">Usługi</Link>
       <Link to="/cennik">Cennik</Link>
       <Link to="/zespol">Zespół</Link>
-      <Link to="/realizacje">Realizacje</Link>
+      {/* <Link to="/realizacje">Realizacje</Link> */}
       <Link to="/kontakt">Kontakt</Link>
 
       <a href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska">

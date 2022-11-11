@@ -14,18 +14,18 @@ export const Address = styled.p`
   &::after {
     content: '';
     position: absolute;
+    bottom: -10px;
+    left: 0;
     width: 50%;
     height: 1px;
     background-color: black;
-    bottom: -10px;
-    left: 0;
   }
 `
 
 export const OfferDetailsList = styled.ul`
+  margin: 50px 0;
   list-style: none;
   padding: 0;
-  margin: 50px 0;
 
   li {
     display: flex;
@@ -58,9 +58,9 @@ export const ContactDetails = styled.div`
   margin-bottom: 50px;
 
   img {
+    margin-right: 20px;
     width: 100px;
     height: 100px;
-    margin-right: 20px;
     border-radius: 50%;
   }
 

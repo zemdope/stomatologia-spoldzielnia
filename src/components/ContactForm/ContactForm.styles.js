@@ -17,11 +17,11 @@ export const ContactFormWrapper = styled.form`
 
   input,
   textarea {
+    padding: 5px;
+    margin: 5px 0;
     border: 1px solid ${({ theme }) => theme.color.dark};
     font-family: ${({ theme }) => theme.font.family.montserrat};
-    margin: 5px 0;
     resize: none;
-    padding: 5px;
     background-color: #f6f6f4;
   }
 

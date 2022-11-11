@@ -10,7 +10,27 @@ import {
 
 const Realizacje = ({ data }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper
+      initial={{
+        opacity: 0,
+        x: -300,
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: 300,
+      }}
+      transition={{
+        type: 'spring',
+        duration: 0.8,
+        stiffness: 75,
+
+        delay: 0.6,
+      }}
+    >
       <CornerEffect position="bottomRight" size="80px" distance="20px">
         <IntroSection>
           <div>
@@ -106,7 +126,7 @@ const Realizacje = ({ data }) => {
 
 export const query = graphql`
   query {
-    teamPhoto: file(relativePath: { regex: "/7.jpg/" }) {
+    teamPhoto: file(relativePath: { regex: "/11.jpg/" }) {
       publicURL
     }
     whiteToo: file(relativePath: { regex: "/13.jpg/" }) {

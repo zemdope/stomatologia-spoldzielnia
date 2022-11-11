@@ -13,9 +13,9 @@ export const StyledListContact = styled.div`
     align-items: center;
 
     h3 {
+      margin: 20px 0;
       font-family: ${({ theme }) => theme.font.family.montserrat};
       font-weight: 700;
-      margin: 20px 0;
     }
     div {
       display: grid;
@@ -31,9 +31,6 @@ export const StyledListContact = styled.div`
       }
     }
   }
-
-  ${({ theme }) => theme.mq.desktop} {
-  }
 `
 export const ContactDetailsWrapper = styled.div`
   a {
@@ -48,10 +45,10 @@ export const ContactDetailsWrapper = styled.div`
     }
   }
   h3 {
+    margin: 20px 0;
     text-align: center;
     font-family: ${({ theme }) => theme.font.family.montserrat};
     font-weight: 700;
-    margin: 20px 0;
   }
 
   display: flex;
@@ -61,7 +58,6 @@ export const ContactDetailsWrapper = styled.div`
   ${({ theme }) => theme.mq.desktop} {
     flex-direction: row;
     justify-content: center;
-
     gap: 300px;
   }
 `
@@ -87,10 +83,10 @@ export const ContactContentWrapper = styled(ContentWrapper)`
     grid-gap: 0 100px;
 
     ${ContactFormWrapper} {
-      width: 100% !important;
-      margin: 0;
       grid-column: 2 / 3;
       justify-self: center;
+      width: 100% !important;
+      margin: 0;
     }
 
     ${ContactInfoWrapper} {
