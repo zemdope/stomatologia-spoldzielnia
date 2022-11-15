@@ -15,7 +15,7 @@ import {
   CleanToothIconStyled,
   CrownToothIconStyled,
 } from '../assets/styles/pages/uslugi.styles'
-import { SEO } from './SEO'
+import SEO from '../components/SEO/SEO'
 
 export const Head = () => (
   <>

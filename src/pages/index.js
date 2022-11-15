@@ -31,7 +31,7 @@ import {
 } from '../assets/styles/pages/IndexPage.styles'
 import { ContactForm } from '../components/ContactForm/ContactForm'
 import { AnimatePresence } from 'framer-motion'
-import { SEO } from './SEO'
+import SEO from '../components/SEO/SEO'
 
 export const Head = () => (
   <>

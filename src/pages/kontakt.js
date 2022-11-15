@@ -14,7 +14,7 @@ import {
 import { ContactForm } from '../components/ContactForm/ContactForm'
 
 import SimpleMap from '../components/Maps/SimpleMap'
-import { SEO } from './SEO'
+import SEO from '../components/SEO/SEO'
 
 export const Head = () => (
   <>

@@ -6,7 +6,7 @@ import {
   PriceWrapperContent,
 } from '../assets/styles/pages/cennik.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
-import { SEO } from './SEO'
+import SEO from '../components/SEO/SEO'
 
 export const Head = () => (
   <>

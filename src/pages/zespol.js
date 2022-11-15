@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
-
 import PhoneIcon from 'assets/icons/phone.svg'
 import {
   Hero,
@@ -10,7 +9,7 @@ import {
   InfoItemContent,
   StyledLink,
 } from '../assets/styles/pages/zespol.styles'
-import { SEO } from './SEO'
+import SEO from '../components/SEO/SEO'
 
 export const Head = () => (
   <>
@@ -66,10 +65,7 @@ const Zespol = ({ data }) => {
             Interesuje go również siłownia, fizjoterapia i szeroko pojęty zdrowy
             styl życia.
           </p>
-          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
-            <MailIcon />
-            stomatolog.spoldzielnialekarska@gmail.com
-          </a> */}
+
           <a href="tel:605439089">
             {' '}
             <PhoneIcon /> 605 439 089
@@ -94,9 +90,7 @@ const Zespol = ({ data }) => {
             licznych kursach i szkoleniach. W wolnym czasie amator sportów
             siłowych oraz elektronicznej rozrywki.
           </p>
-          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
-            <MailIcon /> stomatolog.spoldzielnialekarska@gmail.com
-          </a> */}
+
           <a href="tel:605439089">
             <PhoneIcon /> 605 439 089
           </a>
@@ -124,9 +118,7 @@ const Zespol = ({ data }) => {
             sporty siłowe. Trenuje trójbój biorąc aktywny udział w turniejach na
             szczeblu ogólnopolskim.
           </p>
-          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
-            <MailIcon /> stomatolog.spoldzielnialekarska@gmail.com
-          </a> */}
+
           <a href="tel:605439089">
             <PhoneIcon /> 605 439 089
           </a>
