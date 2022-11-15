@@ -8,7 +8,7 @@ import { StyledFooter } from './Footer.styles'
 
 export const Footer = () => (
   <StyledFooter>
-    <h4>Spółdzielnia stomatologiczna</h4>
+    <h4>Stomatolog spółdzielnia lekarska</h4>
     <div>
       <Link to="/uslugi">Usługi</Link>
       <Link to="/cennik">Cennik</Link>

@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
   h4 {
     grid-row: 1/2;
     margin-bottom: 20px;
-    align-self: center;
+    /* align-self: center; */
     font-family: ${({ theme }) => theme.font.family.montserrat};
     font-weight: 600;
   }
@@ -39,6 +39,7 @@ export const StyledFooter = styled.footer`
   div:last-of-type {
     grid-row: 1/2;
     margin-left: auto;
+    align-self: center;
 
     span {
       margin-right: 20px;

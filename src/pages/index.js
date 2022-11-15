@@ -84,14 +84,15 @@ const IndexPage = ({ data }) => {
           >
             <h2>Obsługa klienta</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
-              facilis accusamus reiciendis autem vitae perferendis, corporis
-              natus harum deserunt quisquam nihil recusandae reprehenderit
+              Profesjonalny stomatologiczny gabinet w sercu Gdańska. Młodzi,
+              zaangażowani lekarze, przyjazna dla pacjenta atmosfera, a
+              jednocześnie otoczenie wykwalifikowanej kadry lekarskiej w
+              przychodni ogólnomedycznej.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              ullam voluptate nesciunt dicta id debitis doloremque et
-              dignissimos perspiciatis provident.
+              Wyróżnia nas duże zaangażowanie w pracy z pacjentami. Staramy się,
+              aby wizyty przebiegały sprawnie, bezboleśnie i bezstresowo dla
+              pacjentów.
             </p>
           </WelcomeSectionContent>
 
@@ -112,31 +113,30 @@ const IndexPage = ({ data }) => {
           }}
         >
           <HighlightedHeading width="50" isRight>
-            Dlaczego szukasz właśnie nas?
+            Co nas Wyróżnia?
           </HighlightedHeading>
           <StyledList>
             <li>
-              <h3>Kompleksowa obsługa</h3>
+              <h3>Nowoczesna stomatologia</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia tenetur ea cum itaque, architecto quis fugit voluptas
-                sapiente nihil sequi.
+                Na pierwszej wizycie po wnikliwym badaniu i diagnostyce
+                wykonujemy plan leczenia, który w każdym przypadku jest
+                dopasowany do Twoich potrzeb.
               </p>
             </li>
             <li>
-              <h3>Stomatolog na wyłączność</h3>
+              <h3>Stomatologia bez bólu</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia tenetur ea cum itaque, architecto quis fugit voluptas
-                sapiente nihil sequi.
+                Nasz personel pozwoli Ci przejść bezstresowo i bezboleśnie przez
+                wszystkie etapy leczenia.
               </p>
             </li>
             <li>
-              <h3>Zgrany zespół</h3>
+              <h3>Indywidualne podejście</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia tenetur ea cum itaque, architecto quis fugit voluptas
-                sapiente nihil sequi.
+                Indywidualne podejście do każdego Pacjenta, który, zawsze może
+                liczyć na pełne zaangażowanie, profesjonalizm i empatię naszego
+                zespołu ekspertów.
               </p>
             </li>
           </StyledList>
@@ -147,8 +147,8 @@ const IndexPage = ({ data }) => {
             <StyledButton as={Link} to="/cennik" isCentered>
               cennik usług
             </StyledButton>
-            <StyledButton as={Link} to="/realizacje" isCentered>
-              nasze realizacje
+            <StyledButton as={Link} to="/uslugi" isCentered>
+              nasze usługi
             </StyledButton>
           </div>
           <ShowcaseGallery>
@@ -173,7 +173,7 @@ const IndexPage = ({ data }) => {
         <ServicesSection>
           <div>
             <HighlightedHeading width="55">
-              Twój komfort ponad wszystko
+              Twój stomatolog w Gdańsku
             </HighlightedHeading>
 
             <StyledLinkButton as={Link} to="/uslugi">
@@ -186,31 +186,38 @@ const IndexPage = ({ data }) => {
           </p>
           <StyledList>
             <li>
-              <h3>Lorem ipsum dolor</h3>
+              <h3>Protetyka</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium sint optio quos saepe id illo.
+                Protetyka stomatologiczna jest dziedziną stomatologii zajmującą
+                się odtwarzaniem utraconej funkcji żucia i poprawą estetyki
+                wyglądu pacjentów poprzez uzupełnianie braków w uzębieniu —
+                zarówno tych częściowych, jak i całkowitych.
               </p>
             </li>
             <li>
-              <h3>Plany leczenia</h3>
+              <h3>Implantologia</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium sint optio quos saepe id illo.
+                Implantologia to dziedzina stomatologii, która skupia się na
+                eliminowaniu braków zębowych w szczęce lub żuchwie przy pomocy
+                implantów.
               </p>
             </li>
             <li>
-              <h3>Wysoki poziom świadczonych usług</h3>
+              <h3>Chirurgia stomatologiczna</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium sint optio quos saepe id illo.
+                Chirurgia stomatologiczna to dział stomatologii skupionych na
+                leczeniu chorób jamy ustnej. Zabiegi z jej zakresu, mimo tego,
+                że są inwazyjne, oferują wysoką skuteczność i efekty utrzymujące
+                się przez długi czas. Dzięki temu nasi pacjenci mogą cieszyć się
+                zdrowym uzębieniem, wolnym od zmian chorobowych czy stanów
+                zapalnych.
               </p>
             </li>
             <li>
-              <h3>współpraca z najlepszymi</h3>
+              <h3>Stomatologia zachowawcza</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium sint optio quos saepe id illo.
+                Dzial stomatologii poświęcony profilaktyce próchnicy zębów oraz
+                leczeniu ubytków próchnicowych.
               </p>
             </li>
           </StyledList>
@@ -251,7 +258,7 @@ const IndexPage = ({ data }) => {
         <ReviewsSection>
           <div>
             <HighlightedHeading width="70">
-              Co mówią o nas nasi pacjenci?
+              Zobacz opinie naszych Pacjentów
             </HighlightedHeading>
             <p>
               Bezkompromisowo wspieramy naszych pacjentów, a ich satysfakcja
@@ -261,15 +268,12 @@ const IndexPage = ({ data }) => {
           <div>
             <StyledReview>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-                ex pariatur doloribus architecto exercitationem. Deleniti quis
-                laudantium repellendus totam quam eius maiores, laboriosam,
-                dignissimos explicabo magni, autem soluta natus alias
-                consectetur? Labore recusandae, deserunt, deleniti neque est
-                quidem fugiat culpa ut optio vel rem at, praesentium cum
-                temporibus sunt modi.
+                Bardzo serdecznie polecam to miejsce, pełen profesjonalizm,
+                dbałość i troska o pacjenta. W kilku miejscach nie podjęto się
+                usunięcia mojej 8, w tym przypadku zabieg wykonany w bardzo
+                komfortowych warunkach, szybko i co najważniejsze, bezboleśnie.
               </p>
-              <p>Jacek</p>
+              <p>Michał</p>
 
               <WrapperIcons>
                 <StarIconStyled />
@@ -282,11 +286,13 @@ const IndexPage = ({ data }) => {
             </StyledReview>
             <StyledReview>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita nihil tenetur nisi unde ducimus ea ratione repudiandae
-                sit quas beatae?
+                Bardzo serdecznie polecam to miejsce, pełen profesjonalizm,
+                dbałość i troska o pacjenta. W kilku miejscach nie podjęto się
+                usunięcia mojej 8, w tym przypadku zabieg wykonany w bardzo
+                komfortowych warunkach, szybko i co najważniejsze, bezboleśnie.
               </p>
-              <p>Krystian</p>
+              <p>Michał</p>
+
               <WrapperIcons>
                 <StarIconStyled />
                 <StarIconStyled />

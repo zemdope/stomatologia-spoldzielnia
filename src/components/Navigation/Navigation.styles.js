@@ -96,6 +96,7 @@ export const WrapperDesktop = styled(Wrapper)`
 export const StyledLogo = styled(Logo)`
   width: 60px;
   height: 60px;
+  padding: 5px;
 
   ${({ theme }) => theme.mq.desktop} {
     margin-right: 40px;

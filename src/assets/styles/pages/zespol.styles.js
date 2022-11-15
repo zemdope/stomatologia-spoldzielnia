@@ -21,13 +21,20 @@ background:linear-gradient(
   }
   h1, p {
     color: white;
+    text-shadow: 0 0 20px black;
   }
   
   ${({ theme }) => theme.mq.desktop} {
-    height: 800px;
+    /* height: 800px; */
     width: calc(100% + 200px);
     margin-left: -100px;
+
+  p {
+    margin-bottom: 50px;
   }
+  }
+
+  
 `
 
 export const InfoItem = styled.article`

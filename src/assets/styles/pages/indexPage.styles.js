@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import arrowIcon from 'assets/styles/arrow.svg'
 import { CornerEffect } from '../../../components/CornerEffectProvider/CornerEffect'
@@ -69,7 +69,7 @@ export const Hero = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 130px;
+  margin-bottom: 150px;
   height: 80vh;
 
   ${({ theme }) => theme.mq.tablet} {
@@ -140,10 +140,10 @@ export const HeroHeading = styled(motion.div)`
 `
 
 const StyledSection = styled.section`
-  margin: 100px 0;
+  margin: 200px 0;
 
   ${({ theme }) => theme.mq.desktop} {
-    margin: 100px 0;
+    margin: 200px 0;
   }
 `
 
@@ -159,14 +159,14 @@ export const WelcomeSection = styled(StyledSection)`
   }
 
   ${({ theme }) => theme.mq.bigDesktop} {
-    margin: 180px 0 100px;
+    margin: 220px 0 100px;
   }
 `
 
 export const WelcomeSectionContent = styled(CornerEffect)`
   background-color: ${({ theme }) => theme.color.dark};
   padding: 30px 20px;
-  width: 90%;
+  width: 95%;
   position: relative;
   h2 {
     margin: 0 0 20px 0;
@@ -393,6 +393,7 @@ export const ReviewsSection = styled(StyledSection)`
         margin: 0;
       }
     }
+
     div:last-child {
       grid-row: 1 / 1;
       grid-column: 1 / 2;

@@ -23,7 +23,7 @@ export const PriceWrapperContent = styled.div`
   li {
     display: flex;
     position: relative;
-    gap: 100px;
+    /* gap: 30px; */
     list-style: none;
 
     &:first-child::after {
@@ -39,6 +39,7 @@ export const PriceWrapperContent = styled.div`
     }
 
     p {
+      font-size: ${({ theme }) => theme.font.size.thumbnailSmall};
       margin: 10px 0;
       width: 100%;
     }
@@ -46,6 +47,12 @@ export const PriceWrapperContent = styled.div`
       margin-right: 20px;
       font-weight: 500;
       text-align: right;
+    }
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    p {
+      font-size: ${({ theme }) => theme.font.size.paragraph};
     }
   }
 `

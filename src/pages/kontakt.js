@@ -14,7 +14,6 @@ import {
 import { ContactForm } from '../components/ContactForm/ContactForm'
 
 import SimpleMap from '../components/Maps/SimpleMap'
-import { AnimatePresence } from 'framer-motion'
 
 const Kontakt = () => {
   return (
@@ -85,13 +84,15 @@ const Kontakt = () => {
         </div>
         <div>
           <h3>Kontakt</h3>
-          <a href="mailto:winkel@gmail.com">
+          <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
             <MailIcon />
-            winkel@gmail.com
+            stomatolog.spoldzielnia
+            <br />
+            lekarska@gmail.com
           </a>
-          <a href="tel:789789789">
+          <a href="tel:605439089">
             {' '}
-            <PhoneIcon /> 789 789 789
+            <PhoneIcon /> 605 439 089
           </a>
         </div>
       </ContactDetailsWrapper>

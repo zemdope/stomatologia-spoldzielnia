@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
-import MailIcon from 'assets/icons/mail.svg'
+
 import PhoneIcon from 'assets/icons/phone.svg'
 import {
   Hero,
@@ -46,19 +46,23 @@ const Zespol = ({ data }) => {
           <HighlightedHeading>Aleksander Winkel</HighlightedHeading>
           <p>Lekarz dentysta</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut
-            soluta, pariatur nulla amet quod officiis voluptas iste laboriosam
-            doloremque! Consequatur accusantium alias a delectus, necessitatibus
-            consequuntur ipsum fuga quam vel voluptates inventore veniam neque
-            architecto aspernatur quo ut eaque?
+            Absolwent Gdańskiego Uniwersytetu Medycznego. Do każdego leczenia
+            podchodzi bardzo indywidualnie. Pacjenci cenią sobie bezstresową
+            atmosferę, a jednocześnie wysoką staranność podczas leczenia.
+            Zajmuje się protetyką i chirurgią stomatologiczną, ale również
+            estetyczną stomatologią zachowawczą oraz endodoncją. Cały czas stara
+            się rozwijać swoje umiejętności na specjalistycznych kursach i
+            szkoleniach. W wolnym czasie realizuje się sportowo jako koszykarz.
+            Interesuje go również siłownia, fizjoterapia i szeroko pojęty zdrowy
+            styl życia.
           </p>
-          <a href="mailto:winkel@gmail.com">
+          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
             <MailIcon />
-            winkel@gmail.com
-          </a>
-          <a href="tel:789789789">
+            stomatolog.spoldzielnialekarska@gmail.com
+          </a> */}
+          <a href="tel:605439089">
             {' '}
-            <PhoneIcon /> 789 789 789
+            <PhoneIcon /> 605 439 089
           </a>
           <StyledLink href="https://www.znanylekarz.pl/aleksander-winkel/stomatolog-chirurg-stomatologiczny-protetyk/gdansk#fid=233841">
             Umów wizytę
@@ -68,20 +72,23 @@ const Zespol = ({ data }) => {
       </InfoItem>
       <InfoItem>
         <InfoItemContent>
-          <HighlightedHeading>Tomasz Kowalski</HighlightedHeading>
+          <HighlightedHeading>Bartosz Olszlegier</HighlightedHeading>
           <p>Lekarz dentysta</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut
-            soluta, pariatur nulla amet quod officiis voluptas iste laboriosam
-            doloremque! Consequatur accusantium alias a delectus, necessitatibus
-            consequuntur ipsum fuga quam vel voluptates inventore veniam neque
-            architecto aspernatur quo ut eaque?
+            Absolwent Gdańskiego Uniwersytetu Medycznego. Zajmuje się leczeniem
+            protetycznym oraz stomatologią zachowawczą z endodoncją i chirurgią
+            stomatologiczną. Jego priorytetem jest bezbolesne i komfortowe
+            przeprowadzenie leczenia stomatologicznego. W pracy kładzie duży
+            nacisk na rozwój umiejętności i znajomość nowoczesnych technik
+            leczenia. Ciągle poszerza swoje kwalifikacje zawodowe uczęszczając w
+            licznych kursach i szkoleniach. W wolnym czasie amator sportów
+            siłowych oraz elektronicznej rozrywki.
           </p>
-          <a href="mailto:tomasz@gmail.com">
-            <MailIcon /> tomasz@gmail.com
-          </a>
-          <a href="tel:789789789">
-            <PhoneIcon /> 789 789 789
+          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
+            <MailIcon /> stomatolog.spoldzielnialekarska@gmail.com
+          </a> */}
+          <a href="tel:605439089">
+            <PhoneIcon /> 605 439 089
           </a>
           <StyledLink href="https://www.znanylekarz.pl/bartosz-olszlegier/stomatolog-chirurg-stomatologiczny-protetyk/gdansk#fid=233841">
             Umów wizytę
@@ -92,20 +99,26 @@ const Zespol = ({ data }) => {
       </InfoItem>
       <InfoItem>
         <InfoItemContent>
-          <HighlightedHeading>Rafal Nowak</HighlightedHeading>
+          <HighlightedHeading>Konrad Szczerbiński</HighlightedHeading>
           <p>Lekarz dentysta</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aut
-            soluta, pariatur nulla amet quod officiis voluptas iste laboriosam
-            doloremque! Consequatur accusantium alias a delectus, necessitatibus
-            consequuntur ipsum fuga quam vel voluptates inventore veniam neque
-            architecto aspernatur quo ut eaque?
+            Absolwent Gdańskiego Uniwersytetu Medycznego. W czasie studiów mocno
+            związany z Polskim Towarzystwem Studentów Stomatologii. Przez 3 lata
+            członek zarządu Gdańskiego oddziału, pełniąc m.in funkcję prezesa.
+            Pozwoliło mu to wziąć udział w kilkunastu konferencjach oraz wielu
+            warsztatach i szkoleniach. Ciągle podnosi swoje kwalifikacje jako
+            lekarz dentysta, a dziedzinami do których przykłada największą uwagę
+            jest chirurgia stomatologiczna, implantologia oraz protetyka.
+            Aczkolwiek na co dzień wykonuje zabiegi ze wszystkich dziedzin
+            stomatologii u osób w każdym wieku. Poza stomatologią jego pasją są
+            sporty siłowe. Trenuje trójbój biorąc aktywny udział w turniejach na
+            szczeblu ogólnopolskim.
           </p>
-          <a href="mailto:rafal@gmail.com">
-            <MailIcon /> rafal@gmail.com
-          </a>
-          <a href="tel:789789789">
-            <PhoneIcon /> 789 789 789
+          {/* <a href="mailto:stomatolog.spoldzielnialekarska@gmail.com">
+            <MailIcon /> stomatolog.spoldzielnialekarska@gmail.com
+          </a> */}
+          <a href="tel:605439089">
+            <PhoneIcon /> 605 439 089
           </a>
           <StyledLink href="https://www.znanylekarz.pl/konrad-szczerbinski/stomatolog-chirurg-stomatologiczny-protetyk/gdansk#fid=233841">
             Umów wizytę

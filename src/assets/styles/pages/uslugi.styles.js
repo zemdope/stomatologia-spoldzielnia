@@ -1,8 +1,17 @@
 import HealthcareIcon from '../../icons/healthcare.svg'
 import ImplantIcon from '../../icons/implantIcon.svg'
+import MicroscopeIcon from '../../icons/microscopeIcon.svg'
+import KidsToothIcon from '../../icons/kidsToothIcon.svg'
+import CleanToothIcon from '../../icons/cleanToothIcon.svg'
+import CrownToothIcon from '../../icons/crownedToothIcon.svg'
 import styled from 'styled-components'
 import arrowIcon from '../arrow.svg'
 import { StyledList } from './IndexPage.styles'
+import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles'
+
+export const ContentWrapperStyled = styled(ContentWrapper)`
+  margin-bottom: 100px;
+`
 
 export const Hero = styled.div`
  width: calc(100% + 40px);
@@ -38,9 +47,14 @@ export const Hero = styled.div`
   }
   
   ${({ theme }) => theme.mq.desktop} {
-    height: 800px;
+    /* height: 800px; */
     width: calc(100% + 200px);
     margin-left: -100px;
+
+    h1 {
+    margin-bottom: 50px;
+    
+  }
 
    
   }
@@ -133,13 +147,33 @@ export const ServicesStyledList = styled(StyledList)`
   }
 `
 
-export const StyledIcon = styled(ImplantIcon)`
+export const ImplantIconStyled = styled(ImplantIcon)`
   margin: 10px 0;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
 `
-export const StyledIcon2 = styled(HealthcareIcon)`
+export const KidsToothIconStyled = styled(KidsToothIcon)`
   margin: 10px 0;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
+`
+export const MicroscopeIconStyled = styled(MicroscopeIcon)`
+  margin: 10px 0;
+  width: 70px;
+  height: 70px;
+`
+export const HealthcareIconStyled = styled(HealthcareIcon)`
+  margin: 10px 0;
+  width: 70px;
+  height: 70px;
+`
+export const CleanToothIconStyled = styled(CleanToothIcon)`
+  margin: 10px 0;
+  width: 70px;
+  height: 70px;
+`
+export const CrownToothIconStyled = styled(CrownToothIcon)`
+  margin: 10px 0;
+  width: 70px;
+  height: 70px;
 `
