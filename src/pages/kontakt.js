@@ -14,6 +14,16 @@ import {
 import { ContactForm } from '../components/ContactForm/ContactForm'
 
 import SimpleMap from '../components/Maps/SimpleMap'
+import { SEO } from './SEO'
+
+export const Head = () => (
+  <>
+    <SEO
+      title="Stomatolog spółdzielnia - Optymalny dentysta Gdańsk"
+      description="Zapraszamy do kontaktu z Gabinetem Stomatologicznym spółdzielnia w Gdańsku na alei Grunwaldzkiej 68. Zapisz się do dentysty Stomatolog spółdzielnia lekarska."
+    />
+  </>
+)
 
 const Kontakt = () => {
   return (

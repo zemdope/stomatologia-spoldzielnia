@@ -10,6 +10,16 @@ import {
   InfoItemContent,
   StyledLink,
 } from '../assets/styles/pages/zespol.styles'
+import { SEO } from './SEO'
+
+export const Head = () => (
+  <>
+    <SEO
+      title="Zespół lekarzy dentystów - Stomatolog spółdzielnia Gdańsk"
+      description="Przedstawiamy zespół lekarzy dentystów pracujący w gabinecie stomatologicznym spółdzielnia Gdańsk. Zachęcamy do odwiedzenia naszego gabinetu."
+    />
+  </>
+)
 
 const Zespol = ({ data }) => {
   return (

@@ -5,7 +5,6 @@ import { theme } from '../../assets/styles/theme'
 import { Navigation } from '../Navigation/Navigation'
 import 'assets/styles/normalize.css'
 import { Footer } from '../Footer/Footer'
-import { Navigations } from '../../pages/404'
 
 export function MainTemplate({ children }) {
   return (

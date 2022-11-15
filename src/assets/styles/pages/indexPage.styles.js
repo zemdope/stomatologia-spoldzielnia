@@ -338,6 +338,7 @@ export const TeamImage = styled(CornerEffect)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+
 `
 
 export const TeamSection = styled(StyledSection)`

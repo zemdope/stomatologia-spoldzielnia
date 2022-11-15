@@ -15,6 +15,16 @@ import {
   CleanToothIconStyled,
   CrownToothIconStyled,
 } from '../assets/styles/pages/uslugi.styles'
+import { SEO } from './SEO'
+
+export const Head = () => (
+  <>
+    <SEO
+      title="Usługi stomatologiczne, dentystyczne - Stomatolog Dentysta Gdańsk"
+      description="Usługi stomatologiczne naszego gabinetu zlokalizowanego w Gdańsk wrzeszcz obejmują m.in. protetykę, leczenie kanałowe, wybielanie zębów i zabiegi implantologiczne."
+    />
+  </>
+)
 
 const Uslugi = ({ data }) => {
   return (
@@ -69,7 +79,7 @@ const Uslugi = ({ data }) => {
           <h3>Endodoncja</h3>
           <p>
             Jest bardzo szybko rozwijającą się dziedziną stomatologii. Właściwą
-            diagnozę zapewnia zastosowanie lup oraz endometru do pomiaru
+            diagnozę zapewnia zastosowanie mikroskopu oraz endometru do pomiaru
             długości kanału. Prawidłowe wyleczenie endodontyczne zapewnia
             długoletnie utrzymanie zębów w jamie ustnej.
           </p>

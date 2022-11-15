@@ -6,6 +6,16 @@ import {
   PriceWrapperContent,
 } from '../assets/styles/pages/cennik.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
+import { SEO } from './SEO'
+
+export const Head = () => (
+  <>
+    <SEO
+      title="Cennik usług stomatologicznych w Stomatolog spółdzielnia Dentysta Gdańsk"
+      description="Cennik usług w Stomatolog spółdzielnia lekarska. konkurencyjne ceny połączone z jakością. Dentysta zaprasza do korzystania z usług w Gdańsku"
+    />
+  </>
+)
 
 const Cennik = ({
   data: { priceSZ, priceCh, priceEn, pricePr, priceSD, priceHie },

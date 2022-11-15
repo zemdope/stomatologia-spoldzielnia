@@ -31,6 +31,13 @@ import {
 } from '../assets/styles/pages/IndexPage.styles'
 import { ContactForm } from '../components/ContactForm/ContactForm'
 import { AnimatePresence } from 'framer-motion'
+import { SEO } from './SEO'
+
+export const Head = () => (
+  <>
+    <SEO />
+  </>
+)
 
 const IndexPage = ({ data }) => {
   return (
@@ -330,7 +337,7 @@ export const query = graphql`
     grid4: file(relativePath: { regex: "/grid3.jpeg/" }) {
       publicURL
     }
-    team: file(relativePath: { regex: "/team.jpeg/" }) {
+    team: file(relativePath: { regex: "/teamSection2.jpg/" }) {
       publicURL
     }
     team2: file(relativePath: { regex: "/TeamSectionPhoto.jpg/" }) {

@@ -11,8 +11,9 @@ const gatsbyRequiredRules = path.join(
 
 module.exports = {
   siteMetadata: {
-    title: `stomatologia-spoldzielnia`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Stomatolog Spółdzielnia - Dentysta Gdańsk Wrzeszcz`,
+    siteUrl: `https://stomatolog-spoldzielnia.pl`,
+    description: `Stomatolog spółdzielnia lekarska zaprasza do gabinetu na leczenie dentystyczne w Gdańsku. Leczenie kanałowe pod mikroskopem,rentgen zębów, estetyczne wypełnienia, pełna protetyka, zaawansowana chirurgia. Doświadczeni lekarze.`,
   },
   plugins: [
     {
@@ -29,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: '338132049',
+        trackingId: 'G-LJEB1M0PBV',
       },
     },
     'gatsby-plugin-sitemap',
