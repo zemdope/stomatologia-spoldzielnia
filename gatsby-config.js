@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: process.env.API_KEY,
-        spaceId: process.env.SPACE_ID_KEY,
+        accessToken: 'Z38kOeIGKXzJgISu88CrmpDCtbNKxNG2Q2fYIO8AsBc',
+        spaceId: 'mam8kmxzslkd',
       },
     },
     'gatsby-plugin-image',
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: process.env.TRACKING_ID_KEY,
+        trackingId: 'G-LJEB1M0PBV',
       },
     },
     'gatsby-plugin-sitemap',
