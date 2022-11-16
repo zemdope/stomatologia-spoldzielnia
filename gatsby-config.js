@@ -17,6 +17,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-LJEB1M0PBV'],
+
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: 'Z38kOeIGKXzJgISu88CrmpDCtbNKxNG2Q2fYIO8AsBc',
@@ -27,13 +38,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'G-LJEB1M0PBV',
-        head: true,
-      },
-    },
+
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
