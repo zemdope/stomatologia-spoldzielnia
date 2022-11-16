@@ -16,7 +16,7 @@ export const ContentWrapperStyled = styled(ContentWrapper)`
 export const Hero = styled.div`
  width: calc(100% + 40px);
   margin-left: -20px;
-  height: 87vh;
+  height: 88vh;
   display: flex;
   
   justify-content: flex-end;
