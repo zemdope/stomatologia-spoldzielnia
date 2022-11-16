@@ -31,7 +31,7 @@ export const Hero = styled.div`
  
   h1 {
     width: 60%;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     font-size: ${({ theme }) => theme.font.size.headingSmall};
     color: white;
     text-shadow: 0 0 20px black;
@@ -47,7 +47,7 @@ export const Hero = styled.div`
   }
   
   ${({ theme }) => theme.mq.desktop} {
-    /* height: 800px; */
+  
     width: calc(100% + 200px);
     margin-left: -100px;
 
