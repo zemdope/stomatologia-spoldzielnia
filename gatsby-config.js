@@ -17,17 +17,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ['G-LJEB1M0PBV'],
-
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-
-    {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: 'Z38kOeIGKXzJgISu88CrmpDCtbNKxNG2Q2fYIO8AsBc',
