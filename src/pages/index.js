@@ -20,7 +20,7 @@ import {
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
-} from 'assets/styles/pages/indexpage.styles'
+} from 'assets/styles/pages/indePage.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
 import {
@@ -28,7 +28,7 @@ import {
   ShowcaseCorner,
   StarIconStyled,
   WrapperIcons,
-} from '../assets/styles/pages/IndexPage.styles'
+} from '../assets/styles/pages/indexPage.styles'
 import { ContactForm } from '../components/ContactForm/ContactForm'
 import { AnimatePresence } from 'framer-motion'
 import SEO from '../components/SEO/SEO'
