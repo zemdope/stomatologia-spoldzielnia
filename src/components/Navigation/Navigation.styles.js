@@ -9,7 +9,7 @@ export const OuterWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 70px;
-  padding: 30px;
+  padding: 30px 30px 30px 5px;
   position: absolute;
   top: 0;
   z-index: 1000;
@@ -94,9 +94,9 @@ export const WrapperDesktop = styled(Wrapper)`
   }
 `
 export const StyledLogo = styled(Logo)`
-  width: 60px;
-  height: 60px;
-  padding: 5px;
+  width: 70px;
+  height: 70px;
+  padding: 15px 5px 5px;
 
   ${({ theme }) => theme.mq.desktop} {
     margin-right: 40px;
