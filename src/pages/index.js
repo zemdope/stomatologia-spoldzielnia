@@ -20,7 +20,7 @@ import {
   WelcomeSection,
   WelcomeSectionContent,
   WelcomeSectionImage,
-} from 'assets/styles/pages/indePage.styles'
+} from 'assets/styles/pages/indexPage.styles'
 import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
 import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
 import {
