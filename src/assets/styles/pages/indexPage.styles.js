@@ -166,7 +166,7 @@ export const WelcomeSection = styled(StyledSection)`
 export const WelcomeSectionContent = styled(CornerEffect)`
   background-color: ${({ theme }) => theme.color.dark};
   padding: 30px 20px;
-  width: 95%;
+  width: 100%;
   position: relative;
   h2 {
     margin: 0 0 20px 0;
@@ -199,8 +199,8 @@ export const WelcomeSectionContent = styled(CornerEffect)`
 
 export const WelcomeSectionImage = styled(CornerEffect)`
   position: relative;
-  margin-top: 10px;
-  width: 75%;
+ 
+  width: 80%;
   height: 250px;
 
   background-image: url("${({ imageSource }) => imageSource}");

@@ -8,7 +8,7 @@ export const OuterWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 70px;
   padding: 30px;
   position: absolute;
   top: 0;
