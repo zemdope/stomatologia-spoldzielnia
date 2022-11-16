@@ -9,7 +9,7 @@ export const ContactForm = () => {
 
   return (
     <ContactFormWrapper onSubmit={handleSubmit}>
-      <HighlightedHeading width="65">Naszpisz do nas</HighlightedHeading>
+      <HighlightedHeading width="65">Napisz do nas</HighlightedHeading>
       <label htmlFor="email">Adres e-mail</label>
       <input type="email" name="email" id="email" placeholder="Adres e-mail" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
