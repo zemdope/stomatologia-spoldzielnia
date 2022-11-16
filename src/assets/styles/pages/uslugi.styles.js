@@ -62,7 +62,7 @@ export const Hero = styled.div`
 
 export const HeroInfo = styled.div`
 margin-bottom: 100px;
-margin-top: 70px;
+margin-top: 50px;
   a {
     
     position: relative;
