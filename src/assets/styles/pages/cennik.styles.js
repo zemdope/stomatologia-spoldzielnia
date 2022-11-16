@@ -23,7 +23,7 @@ export const PriceWrapperContent = styled.div`
   li {
     display: flex;
     position: relative;
-    /* gap: 30px; */
+
     list-style: none;
 
     &:first-child::after {
@@ -45,7 +45,7 @@ export const PriceWrapperContent = styled.div`
     }
     p:last-child {
       margin-right: 20px;
-      font-weight: 500;
+      font-weight: 600;
       text-align: right;
     }
   }

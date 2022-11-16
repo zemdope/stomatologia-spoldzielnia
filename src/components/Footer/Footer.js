@@ -22,7 +22,9 @@ export const Footer = () => (
     </div>
     <div>
       <StyledIcon isDark>
-        <FacebookIcon />
+        <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
+          <FacebookIcon />
+        </a>
       </StyledIcon>
       <StyledIcon isDark>
         <InstagramIcon />

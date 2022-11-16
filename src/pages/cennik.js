@@ -41,7 +41,6 @@ const Cennik = ({
       delay: 0.4,
     }}
   >
-    {console.log(priceHie)}
     <HighlightedHeading>Cennik</HighlightedHeading>
     <PriceWrapper>
       <h3>Stomatologia Zachowawcza</h3>

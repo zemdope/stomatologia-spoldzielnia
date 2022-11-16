@@ -77,7 +77,9 @@ export const Navigation = () => {
         </StyledNavigation>
         <SocialIconWrapper>
           <StyledSocialIcon isDark>
-            <FacebookIcon />
+            <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
+              <FacebookIcon />
+            </a>
           </StyledSocialIcon>
           <StyledSocialIcon isDark>
             <InstagramIcon />
@@ -130,7 +132,9 @@ export const Navigation = () => {
         </StyledNavigation>
         <SocialIconWrapper>
           <StyledSocialIcon isDark>
-            <FacebookIcon />
+            <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
+              <FacebookIcon />
+            </a>
           </StyledSocialIcon>
           <StyledSocialIcon isDark>
             <InstagramIcon />
