@@ -6,7 +6,7 @@ import CleanToothIcon from '../../icons/cleanToothIcon.svg'
 import CrownToothIcon from '../../icons/crownedToothIcon.svg'
 import styled from 'styled-components'
 import arrowIcon from '../arrow.svg'
-import { StyledList } from './IndexPage.styles'
+import { StyledList } from './indexPage.styles'
 import { ContentWrapper } from '../../../components/ContentWrapper/ContentWrapper.styles'
 
 export const ContentWrapperStyled = styled(ContentWrapper)`
