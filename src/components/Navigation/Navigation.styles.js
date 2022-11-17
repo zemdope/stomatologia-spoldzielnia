@@ -144,7 +144,7 @@ export const StyledNavigation = styled.nav`
       letter-spacing: 1px;
       color: black;
       text-decoration: none;
-      font-size: ${({ theme }) => theme.font.size.thumbnail};
+      font-size: ${({ theme }) => theme.font.size.paragraph};
     }
   }
 
