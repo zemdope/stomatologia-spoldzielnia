@@ -8,13 +8,12 @@ export const OuterWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 65px;
+  height: 70px;
   padding: 30px 30px 30px 5px;
   position: absolute;
+
   top: 0;
-  /* margin: 0; */
   z-index: 1000;
-  position: fixed;
   background-color: #f6f6f4;
 `
 
@@ -22,8 +21,8 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -31,7 +30,7 @@ export const StyledBurger = styled.button`
   z-index: 10;
 
   span {
-    width: 3rem;
+    width: 2.5rem;
     height: 1px;
     background: #02182b;
     transition: all 0.3s linear;
@@ -44,7 +43,7 @@ export const StyledBurger = styled.button`
     }
 
     :nth-child(2) {
-      width: 2.5rem;
+      width: 2rem;
       opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
       transform: ${({ isOpen }) =>
         isOpen ? 'translateX(20px)' : 'translateX(0)'};
@@ -95,12 +94,12 @@ export const WrapperDesktop = styled(Wrapper)`
     flex-direction: row;
     width: 100%;
     height: unset;
-    transform: none;
   }
 `
 export const StyledLogo = styled(Logo)`
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
+
   padding: 15px 5px 5px 5px;
 
   ${({ theme }) => theme.mq.desktop} {

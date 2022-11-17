@@ -12,6 +12,7 @@ background-color: #f6f6f4;
 
     font-size: 62.5%;
     scroll-behavior: smooth;
+    
   }
   
   body {

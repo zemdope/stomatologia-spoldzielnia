@@ -85,9 +85,10 @@ export const Hero = styled.div`
 
 export const HeroImage = styled.div`
 position: relative;
-width: calc(100% + 40px);
+ width: calc(100% + 40px); 
    margin-left:-20px;
-   margin-right:-20px;
+   margin-right:-20px; 
+  
   max-width: 1200px;
   height: 100%;
   background:linear-gradient(
