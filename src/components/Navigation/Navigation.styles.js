@@ -72,18 +72,25 @@ export const Wrapper = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  transform: ${({ isOpen }) =>
+  /* transform: ${({ isOpen }) =>
     isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+  transition: all 400ms ease-out; */
+  clip-path: ${({ isOpen }) =>
+    isOpen
+      ? 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)'
+      : 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)'};
   transition: all 400ms ease-out;
 
   ${({ theme }) => theme.mq.desktop} {
     display: none;
   }
 `
+// clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+// clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
 export const WrapperDesktop = styled(Wrapper)`
   display: none;
   background-color: #f6f6f4;
-
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   ${({ theme }) => theme.mq.desktop} {
     padding: 5px 45px;
     display: flex;
@@ -102,7 +109,7 @@ export const StyledLogo = styled(Logo)`
     margin-right: 40px;
   }
 `
-export const SocialIconWrapper = styled.div``
+export const SocialIconWrapper = styled(motion.div)``
 export const StyledSocialIcon = styled(StyledIcon)`
   margin: 0 20px;
   width: 50px;

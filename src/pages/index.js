@@ -64,7 +64,10 @@ const IndexPage = ({ data }) => {
         }}
       >
         <Hero>
-          <HeroImage imageSource={data.hero.publicURL}>
+          <HeroImage
+            imageSource={data.hero.publicURL}
+            alt="uśmiechnięta kobieta"
+          >
             <HeroHeading
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -109,6 +112,7 @@ const IndexPage = ({ data }) => {
             size="100px"
             distance="30px"
             imageSource={data.welcome.publicURL}
+            alt="obsługa pacjenta"
           />
         </WelcomeSection>
         <AdvantagesSection
@@ -159,10 +163,19 @@ const IndexPage = ({ data }) => {
             </StyledButton>
           </div>
           <ShowcaseGallery>
-            <ShowcaseImage src={data.grid1.publicURL} alt="#" />
-            <ShowcaseImage src={data.grid2.publicURL} alt="#" />
-            <ShowcaseImage src={data.grid3.publicURL} alt="#" />
-            <ShowcaseImage src={data.grid4.publicURL} alt="#" />
+            <ShowcaseImage src={data.grid1.publicURL} alt="zdjęcie uśmiechu" />
+            <ShowcaseImage
+              src={data.grid2.publicURL}
+              alt="badanie mikroskopem"
+            />
+            <ShowcaseImage
+              src={data.grid3.publicURL}
+              alt="badanie mikroskopem"
+            />
+            <ShowcaseImage
+              src={data.grid4.publicURL}
+              alt="propozycja leczenia"
+            />
             <ShowcaseCorner
               position="bottomLeft"
               size="100px"
@@ -250,7 +263,7 @@ const IndexPage = ({ data }) => {
             distance="30px"
             color="beige"
             imageSource={data.team.publicURL}
-            alt=""
+            alt="zespół"
           />
           <TeamImage
             position="topRight"
@@ -258,7 +271,7 @@ const IndexPage = ({ data }) => {
             distance="30px"
             color="dark"
             imageSource={data.team2.publicURL}
-            alt=""
+            alt="certyfikat zadowolenia pacjentów"
           />
         </TeamSection>
 

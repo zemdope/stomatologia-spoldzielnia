@@ -13,6 +13,7 @@ import {
   SocialIconWrapper,
   WrapperDesktop,
 } from './Navigation.styles'
+import { motion } from 'framer-motion'
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,10 +22,22 @@ export const Navigation = () => {
     setIsOpen(!isOpen)
   }
 
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: { opacity: 0, y: 40 },
+  }
+  const item = {
+    visible: { scale: 1 },
+    hidden: { scale: 0 },
+  }
+
   return (
     <OuterWrapper>
       <Link to="/">
-        <StyledLogo isSmall isMobile />
+        <StyledLogo />
       </Link>
       <StyledBurger isOpen={isOpen} onClick={toggleNavigation}>
         <span></span>
@@ -38,44 +51,78 @@ export const Navigation = () => {
         </Link>
 
         <StyledNavigation>
-          <ul>
-            <li>
+          <motion.ul
+          // initial="hidden"
+          // animate={isOpen ? 'visible' : 'null'}
+          // variants={variants}
+          >
+            <motion.li
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'null'}
+              transition={{ duration: 0.4, delay: 0.4 }}
+              variants={variants}
+            >
               <a
                 href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
                 onClick={toggleNavigation}
               >
                 Umów Wizytę
               </a>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'null'}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              variants={variants}
+            >
               <Link onClick={toggleNavigation} to="/uslugi">
                 Usługi
               </Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'null'}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              variants={variants}
+            >
               <Link onClick={toggleNavigation} to="/cennik">
                 Cennik
               </Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'null'}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              variants={variants}
+            >
               <Link onClick={toggleNavigation} to="/zespol">
                 Zespół
               </Link>
-            </li>
+            </motion.li>
             {/* <li>
                <Link onClick={toggleNavigation} to="/realizacje">
                 Realizacje
               </Link> 
             </li> */}
-            <li>
+            <motion.li
+              initial="hidden"
+              animate={isOpen ? 'visible' : 'null'}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              variants={variants}
+            >
               <Link onClick={toggleNavigation} to="/kontakt">
                 Kontakt
               </Link>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </StyledNavigation>
-        <SocialIconWrapper>
+        <SocialIconWrapper
+          initial="hidden"
+          animate={isOpen ? 'visible' : 'null'}
+          transition={{ duration: 0.5, delay: 0.8, type: 'tween' }}
+          variants={item}
+        >
           <StyledSocialIcon isDark>
             <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
               <FacebookIcon />
@@ -89,7 +136,7 @@ export const Navigation = () => {
 
       <WrapperDesktop isOpen={isOpen}>
         <Link onClick={toggleNavigation} to="/">
-          <StyledLogo isSmall />
+          <StyledLogo />
         </Link>
 
         <StyledNavigation>

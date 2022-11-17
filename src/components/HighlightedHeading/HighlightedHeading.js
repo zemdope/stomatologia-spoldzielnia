@@ -15,7 +15,7 @@ export const HighlightedHeading = ({
 
   const handlePlayStateChange = throttle(() => {
     const { top } = headingRef.current.getBoundingClientRect()
-    if (top < 800) {
+    if (top < 750) {
       setPlayState(true)
     }
   }, 150)

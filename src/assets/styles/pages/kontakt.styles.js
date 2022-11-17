@@ -47,6 +47,7 @@ export const ContactDetailsWrapper = styled.div`
   h3 {
     margin: 20px 0;
     text-align: center;
+
     font-family: ${({ theme }) => theme.font.family.montserrat};
     font-weight: 700;
   }

@@ -49,7 +49,7 @@ const Uslugi = ({ data }) => {
         delay: 0.6,
       }}
     >
-      <Hero imageSource={data.uslugi.publicURL}>
+      <Hero imageSource={data.uslugi.publicURL} alt="panorama zębów">
         <h1>Sprawdź co oferujemy naszym pacjentom</h1>
       </Hero>
       <HeroInfo>

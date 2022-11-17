@@ -4,13 +4,13 @@ export const StyledFooter = styled.footer`
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr;
-  padding: 50px 20px;
+  padding: 20px;
   background-color: ${({ theme }) => theme.color.beige};
 
   h4 {
     grid-row: 1/2;
     margin-bottom: 20px;
-    /* align-self: center; */
+
     font-family: ${({ theme }) => theme.font.family.montserrat};
     font-weight: 600;
   }
@@ -31,7 +31,8 @@ export const StyledFooter = styled.footer`
       letter-spacing: 1px;
 
       :last-child {
-        font-weight: 500;
+        font-weight: 600;
+        color: ${({ theme }) => theme.color.dark};
       }
     }
   }
