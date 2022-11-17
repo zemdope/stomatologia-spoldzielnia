@@ -46,7 +46,7 @@ export const InfoItem = styled.article`
     max-width: 1000px;
     margin: 150px auto;
     display: flex;
-    align-items: center;
+    align-self: flex-start;
     position: relative;
     div {
       width: 50%;
