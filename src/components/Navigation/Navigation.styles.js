@@ -133,11 +133,13 @@ export const StyledNavigation = styled.nav`
       font-weight: 600;
       min-width: 150px;
       position: relative;
-      color: ${({ theme }) => theme.color.dark};
+      color: #02182b;
     }
     a {
       display: inline-block;
+
       padding: 25px;
+
       font-family: 'Intitled Sans', sans-serif;
       font-weight: 300;
       text-transform: uppercase;

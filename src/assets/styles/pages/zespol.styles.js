@@ -41,6 +41,7 @@ export const InfoItem = styled.article`
   margin: 100px 0;
   img {
     width: 100%;
+    height: fit-content;
   }
   ${({ theme }) => theme.mq.desktop} {
     max-width: 1000px;

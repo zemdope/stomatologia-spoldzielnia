@@ -9,7 +9,7 @@ export const StyledFooter = styled.footer`
 
   h4 {
     grid-row: 1/2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     font-family: ${({ theme }) => theme.font.family.montserrat};
     font-weight: 600;
@@ -32,7 +32,7 @@ export const StyledFooter = styled.footer`
 
       :last-child {
         font-weight: 600;
-        color: ${({ theme }) => theme.color.dark};
+        color: #02182b;
       }
     }
   }
@@ -56,7 +56,7 @@ export const StyledFooter = styled.footer`
   }
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: 100px 100px 60px;
+    padding: 20px 100px 60px;
 
     div:first-of-type {
       width: 60%;
