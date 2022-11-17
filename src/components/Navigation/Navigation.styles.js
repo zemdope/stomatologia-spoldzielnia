@@ -32,7 +32,7 @@ export const StyledBurger = styled.button`
   span {
     width: 2rem;
     height: 1px;
-    background: black;
+    background: #02182b;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
@@ -72,9 +72,7 @@ export const Wrapper = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  /* transform: ${({ isOpen }) =>
-    isOpen ? 'translateX(0)' : 'translateX(-100%)'};
-  transition: all 400ms ease-out; */
+
   clip-path: ${({ isOpen }) =>
     isOpen
       ? 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)'
@@ -85,8 +83,7 @@ export const Wrapper = styled(motion.div)`
     display: none;
   }
 `
-// clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-// clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+
 export const WrapperDesktop = styled(Wrapper)`
   display: none;
   background-color: #f6f6f4;

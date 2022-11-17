@@ -199,7 +199,7 @@ export const WelcomeSectionContent = styled(CornerEffect)`
 
 export const WelcomeSectionImage = styled(CornerEffect)`
   position: relative;
- 
+margin-top: 20px;
   width: 80%;
   height: 250px;
 
@@ -234,17 +234,18 @@ export const ShowcaseSection = styled(StyledSection)`
     display: flex;
     flex-direction: column;
   }
-
+  ${({ theme }) => theme.mq.tablet} {
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
   ${({ theme }) => theme.mq.desktop} {
     margin-top: -50px;
 
     h2 {
       margin: 0 0 30px;
-    }
-    div:nth-child(2) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
     }
   }
 `

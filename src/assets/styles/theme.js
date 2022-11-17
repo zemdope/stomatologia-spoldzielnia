@@ -1,11 +1,11 @@
 export const theme = {
   color: {
-    beige: 'hsl(33,23%,83%)',
-    brown: 'hsl(355,13%,20%)',
-    darkBeige: 'hsl(33,23%,33%)',
-    steel: 'hsl(225,23%,83%)',
-    dark: 'hsl(210,11%,30%)',
-    black: 'hsl(0,0%,0%)',
+    beige: '#ded5ca',
+    darkBeige: '	#685641',
+    brown: '#3a2c2d',
+    steel: '	#cacfde',
+    dark: '	#444d55',
+    black: '#000000',
   },
   size: {
     desktopHeroHeight: '700px',
