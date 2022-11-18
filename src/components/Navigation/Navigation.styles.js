@@ -11,7 +11,7 @@ export const OuterWrapper = styled.div`
   height: 70px;
   padding: 30px 30px 30px 5px;
   position: absolute;
-
+  position: fixed;
   top: 0;
   z-index: 1000;
   background-color: #f6f6f4;
@@ -89,7 +89,7 @@ export const WrapperDesktop = styled(Wrapper)`
   background-color: #f6f6f4;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   ${({ theme }) => theme.mq.desktop} {
-    padding: 5px 30px;
+    padding: 0px 30px;
     display: flex;
     flex-direction: row;
     width: 100%;
