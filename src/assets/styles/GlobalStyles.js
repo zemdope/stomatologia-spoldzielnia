@@ -12,12 +12,15 @@ background-color: #f6f6f4;
     font-size: 62.5%;
     scroll-behavior: smooth;
     margin: 0;
+    overflow-x: hidden;
     
   }
   
   body {
     margin: 0;
     font-size: 1.6rem;
+    overflow-x: hidden;
+
   }
   
   h1,h2,h3,h4,h5,h6 {

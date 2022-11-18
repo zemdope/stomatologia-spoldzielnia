@@ -38,7 +38,7 @@ const Zespol = ({ data }) => {
       }}
     >
       <Hero imageSource={data.teammates.publicURL}>
-        <h1>Poznajmy się</h1>
+        <h1>Nasz zespół</h1>
         <p>
           Razem tworzymy wyjątkowy zespół. Zobacz, dlaczego warto z nami
           współpracować.

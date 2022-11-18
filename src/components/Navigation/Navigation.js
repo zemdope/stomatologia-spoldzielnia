@@ -55,7 +55,7 @@ export const Navigation = () => {
             <motion.li
               initial="hidden"
               animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
               variants={variants}
             >
               <a
@@ -69,7 +69,7 @@ export const Navigation = () => {
             <motion.li
               initial="hidden"
               animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.5 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
               variants={variants}
             >
               <Link onClick={toggleNavigation} to="/uslugi">
@@ -79,7 +79,7 @@ export const Navigation = () => {
             <motion.li
               initial="hidden"
               animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.6 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
               variants={variants}
             >
               <Link onClick={toggleNavigation} to="/cennik">
@@ -89,7 +89,7 @@ export const Navigation = () => {
             <motion.li
               initial="hidden"
               animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.7 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
               variants={variants}
             >
               <Link onClick={toggleNavigation} to="/zespol">
@@ -100,7 +100,7 @@ export const Navigation = () => {
             <motion.li
               initial="hidden"
               animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.8 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
               variants={variants}
             >
               <Link onClick={toggleNavigation} to="/kontakt">
@@ -112,7 +112,7 @@ export const Navigation = () => {
         <SocialIconWrapper
           initial="hidden"
           animate={isOpen ? 'visible' : 'null'}
-          transition={{ duration: 0.5, delay: 0.8, type: 'tween' }}
+          transition={{ duration: 0.3, delay: 1, type: 'tween' }}
           variants={item}
         >
           <StyledSocialIcon isDark>

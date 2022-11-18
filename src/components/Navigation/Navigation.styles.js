@@ -72,7 +72,7 @@ export const Wrapper = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-
+  overflow-y: auto;
   clip-path: ${({ isOpen }) =>
     isOpen
       ? 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)'
