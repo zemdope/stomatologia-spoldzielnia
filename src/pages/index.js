@@ -230,7 +230,7 @@ const IndexPage = ({ data }) => {
             <li>
               <h3>Stomatologia zachowawcza</h3>
               <p>
-                Dzial stomatologii poświęcony profilaktyce próchnicy zębów oraz
+                Dział stomatologii poświęcony profilaktyce próchnicy zębów oraz
                 leczeniu ubytków próchnicowych.
               </p>
             </li>
@@ -247,7 +247,7 @@ const IndexPage = ({ data }) => {
               nam się stworzyć zespół dokosnały.
             </p>
             <StyledLinkButton as={Link} to="/zespol">
-              Sprawdź kim jesteśmy
+              Poznaj nas lepiej
             </StyledLinkButton>
           </div>
           <TeamImage
