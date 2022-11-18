@@ -70,7 +70,7 @@ export const Hero = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 150px;
-  height: 85vh;
+  height: 90vh;
 
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: row;

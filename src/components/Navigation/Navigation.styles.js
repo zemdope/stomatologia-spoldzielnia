@@ -92,14 +92,15 @@ export const WrapperDesktop = styled(Wrapper)`
     padding: 0px 30px;
     display: flex;
     flex-direction: row;
+
     width: 100%;
     height: unset;
   }
 `
 export const StyledLogo = styled(Logo)`
-  width: 70px;
-  height: 70px;
-
+  width: 55px;
+  height: 55px;
+  margin-left: 5px;
   padding: 15px 5px 5px 5px;
 
   ${({ theme }) => theme.mq.desktop} {
