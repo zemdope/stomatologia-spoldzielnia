@@ -6,6 +6,7 @@ export const theme = {
     steel: '	#cacfde',
     dark: '	#444d55',
     black: '#000000',
+    lightBlack: '#02182b',
   },
   size: {
     desktopHeroHeight: '700px',

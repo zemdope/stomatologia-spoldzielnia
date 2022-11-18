@@ -32,8 +32,8 @@ export const StyledBurger = styled.button`
   span {
     width: 2.5rem;
     height: 1px;
-    background: #02182b;
-    transition: all 0.3s linear;
+    background-color: ${({ theme }) => theme.color.lightBlack};
+    transition: transform 0.3s linear;
     position: relative;
     transform-origin: 1px;
     border-radius: 10px;
@@ -131,7 +131,7 @@ export const StyledNavigation = styled.nav`
       font-weight: 600;
       min-width: 150px;
       position: relative;
-      color: #02182b;
+      color: ${({ theme }) => theme.color.lightBlack};
     }
     a {
       display: inline-block;

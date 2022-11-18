@@ -32,7 +32,7 @@ export const StyledFooter = styled.footer`
 
       :last-child {
         font-weight: 600;
-        color: #02182b;
+        color: ${({ theme }) => theme.color.lightBlack};
       }
     }
   }
@@ -51,7 +51,7 @@ export const StyledFooter = styled.footer`
 
   div:last-of-type a {
     a {
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 
