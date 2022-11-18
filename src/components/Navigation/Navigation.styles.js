@@ -98,8 +98,8 @@ export const WrapperDesktop = styled(Wrapper)`
   }
 `
 export const StyledLogo = styled(Logo)`
-  width: 55px;
-  height: 55px;
+  width: ${({ isMobile }) => (isMobile ? '80px' : '55px')};
+  height: ${({ isMobile }) => (isMobile ? '80px' : '55px')};
   margin-left: 5px;
   padding: 15px 5px 5px 5px;
 

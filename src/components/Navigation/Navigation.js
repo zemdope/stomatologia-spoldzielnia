@@ -47,7 +47,7 @@ export const Navigation = () => {
 
       <Wrapper isOpen={isOpen}>
         <Link onClick={toggleNavigation} to="/">
-          <StyledLogo />
+          <StyledLogo isMobile />
         </Link>
 
         <StyledNavigation>
