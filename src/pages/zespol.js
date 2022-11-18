@@ -38,7 +38,7 @@ const Zespol = ({ data }) => {
       }}
     >
       <Hero imageSource={data.teammates.publicURL}>
-        <h1>Poznaj nasz zespół</h1>
+        <h1>Nasz zespół</h1>
         <p>
           Stomatologia nie jest tylko naszym zawodem, lecz przede wszystkim
           pasją.
