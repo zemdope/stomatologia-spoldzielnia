@@ -9,9 +9,9 @@ export const GlobalStyle = createGlobalStyle`
   
   html {
 background-color: #f6f6f4;
-
     font-size: 62.5%;
     scroll-behavior: smooth;
+    margin: 0;
     
   }
   

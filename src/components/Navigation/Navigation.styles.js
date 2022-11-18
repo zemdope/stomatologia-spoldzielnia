@@ -12,7 +12,7 @@ export const OuterWrapper = styled.div`
   padding: 30px 30px 30px 5px;
   position: absolute;
   position: fixed;
-  top: 0;
+  top: 0px;
   z-index: 1000;
   background-color: #f6f6f4;
 `
@@ -61,7 +61,7 @@ export const StyledBurger = styled.button`
 
 export const Wrapper = styled(motion.div)`
   display: flex;
-  will-change: transform;
+  will-change: clip-path;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -77,7 +77,7 @@ export const Wrapper = styled(motion.div)`
     isOpen
       ? 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)'
       : 'polygon(50% 0, 50% 0, 50% 100%, 50% 100%)'};
-  transition: all 400ms ease-out;
+  transition: clip-path 300ms ease-out 100ms;
 
   ${({ theme }) => theme.mq.desktop} {
     display: none;

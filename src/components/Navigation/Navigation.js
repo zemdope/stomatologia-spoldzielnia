@@ -13,7 +13,7 @@ import {
   SocialIconWrapper,
   WrapperDesktop,
 } from './Navigation.styles'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -51,71 +51,65 @@ export const Navigation = () => {
         </Link>
 
         <StyledNavigation>
-          <motion.ul
-          // initial="hidden"
-          // animate={isOpen ? 'visible' : 'null'}
-          // variants={variants}
-          >
-            <motion.li
-              initial="hidden"
-              animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              variants={variants}
-            >
-              <a
-                href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
-                onClick={toggleNavigation}
+          <ul>
+            <AnimatePresence exitBeforeEnter>
+              <motion.li
+                initial="hidden"
+                animate={isOpen ? 'visible' : 'null'}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                variants={variants}
               >
-                Umów Wizytę
-              </a>
-            </motion.li>
+                <a
+                  href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
+                  onClick={toggleNavigation}
+                >
+                  Umów Wizytę
+                </a>
+              </motion.li>
 
-            <motion.li
-              initial="hidden"
-              animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.5 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/uslugi">
-                Usługi
-              </Link>
-            </motion.li>
-            <motion.li
-              initial="hidden"
-              animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.6 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/cennik">
-                Cennik
-              </Link>
-            </motion.li>
-            <motion.li
-              initial="hidden"
-              animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.7 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/zespol">
-                Zespół
-              </Link>
-            </motion.li>
-            {/* <li>
-               <Link onClick={toggleNavigation} to="/realizacje">
-                Realizacje
-              </Link> 
-            </li> */}
-            <motion.li
-              initial="hidden"
-              animate={isOpen ? 'visible' : 'null'}
-              transition={{ duration: 0.4, delay: 0.8 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/kontakt">
-                Kontakt
-              </Link>
-            </motion.li>
-          </motion.ul>
+              <motion.li
+                initial="hidden"
+                animate={isOpen ? 'visible' : 'null'}
+                transition={{ duration: 0.4, delay: 0.5 }}
+                variants={variants}
+              >
+                <Link onClick={toggleNavigation} to="/uslugi">
+                  Usługi
+                </Link>
+              </motion.li>
+              <motion.li
+                initial="hidden"
+                animate={isOpen ? 'visible' : 'null'}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                variants={variants}
+              >
+                <Link onClick={toggleNavigation} to="/cennik">
+                  Cennik
+                </Link>
+              </motion.li>
+              <motion.li
+                initial="hidden"
+                animate={isOpen ? 'visible' : 'null'}
+                transition={{ duration: 0.4, delay: 0.7 }}
+                variants={variants}
+              >
+                <Link onClick={toggleNavigation} to="/zespol">
+                  Zespół
+                </Link>
+              </motion.li>
+
+              <motion.li
+                initial="hidden"
+                animate={isOpen ? 'visible' : 'null'}
+                transition={{ duration: 0.4, delay: 0.8 }}
+                variants={variants}
+              >
+                <Link onClick={toggleNavigation} to="/kontakt">
+                  Kontakt
+                </Link>
+              </motion.li>
+            </AnimatePresence>
+          </ul>
         </StyledNavigation>
         <SocialIconWrapper
           initial="hidden"
@@ -165,11 +159,7 @@ export const Navigation = () => {
                 Zespół
               </Link>
             </li>
-            {/* <li>
-              <Link onClick={toggleNavigation} to="/realizacje">
-                Realizacje
-              </Link>
-            </li> */}
+
             <li>
               <Link onClick={toggleNavigation} to="/kontakt">
                 Kontakt

@@ -29,23 +29,17 @@ const Kontakt = () => {
   return (
     <ContactContentWrapper
       initial={{
-        opacity: 0,
-        x: -300,
+        clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
+        transition: { duration: 0.4 },
       }}
       animate={{
-        opacity: 1,
-        x: 0,
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+
+        transition: { duration: 0.8, delay: 0.8 },
       }}
       exit={{
-        opacity: 0,
-        x: 300,
-      }}
-      transition={{
-        type: 'spring',
-        duration: 0.8,
-        stiffness: 75,
-
-        delay: 0.6,
+        clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
+        transition: { duration: 0.2 },
       }}
     >
       <ContactInfoWrapper>
