@@ -295,12 +295,11 @@ const IndexPage = ({ data }) => {
             </StyledReview>
             <StyledReview>
               <p>
-                Bardzo serdecznie polecam to miejsce, pełen profesjonalizm,
-                dbałość i troska o pacjenta. W kilku miejscach nie podjęto się
-                usunięcia mojej 8, w tym przypadku zabieg wykonany w bardzo
-                komfortowych warunkach, szybko i co najważniejsze, bezboleśnie.
+
+Zabieg przebiegł bez problemu, w czasie wykonywania wszystkich czynności doktor tłumaczył, co teraz będzie robił i po co. Dopytywał się o samopoczucie i reagował, gdy coś było nie tak, aby zabieg przebiegał bez bólu.
+Po zabiegu wyjaśnił jakie podjąć kroki, aby zapobiec problemom na przyszłość.
               </p>
-              <p>Michał</p>
+              <p>Bartek</p>
 
               <WrapperIcons>
                 <StarIconStyled />

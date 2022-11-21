@@ -51,13 +51,13 @@ const Kontakt = () => {
               <span>Poniedzialek</span>
               <span>10:00-18:00</span>
               <span>Wtorek</span>
-              <span>11:00-19:00</span>
+              <span>09:00-17:00</span>
               <span>Środa</span>
-              <span>9:00-17:00</span>
+              <span>11:00-19:00</span>
               <span>Czwartek</span>
-              <span>9:00-20:00</span>
+              <span>08:00-20:00</span>
               <span>Piątek</span>
-              <span>8:00-16:00</span>
+              <span>10:00-18:00</span>
               <span>Sobota</span>
               <span>Zamknięte</span>
               <span>Niedziela</span>
