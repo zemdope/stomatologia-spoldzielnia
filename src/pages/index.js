@@ -32,7 +32,6 @@ import {
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import { AnimatePresence } from 'framer-motion';
 import SEO from '../components/SEO/SEO';
-import { CookieConsent } from 'react-cookie-consent';
 
 export const Head = () => (
   <>

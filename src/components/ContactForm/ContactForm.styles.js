@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ContactFormWrapper = styled.form`
   display: flex;
@@ -38,4 +38,20 @@ export const ContactFormWrapper = styled.form`
       margin: 30px auto;
     }
   }
-`
+`;
+
+export const CheckboxWrapper = styled.div`
+  margin: 12px 7px;
+  label {
+    margin-left: 5px;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+    a:hover {
+      color: #685641;
+    }
+  }
+`;
