@@ -48,6 +48,7 @@ const Zespol = ({ data }) => {
         <InfoItemContent>
           <HighlightedHeading>Aleksander Winkel</HighlightedHeading>
           <p>Lekarz dentysta</p>
+          <img src={data.Olek.publicURL} alt="" />
           <p>
             Absolwent Gdańskiego Uniwersytetu Medycznego. Do każdego leczenia
             podchodzi bardzo indywidualnie. Pacjenci cenią sobie bezstresową
@@ -74,6 +75,7 @@ const Zespol = ({ data }) => {
         <InfoItemContent>
           <HighlightedHeading>Bartosz Olszlegier</HighlightedHeading>
           <p>Lekarz dentysta</p>
+          <img src={data.Tomek.publicURL} alt="" />
           <p>
             Absolwent Gdańskiego Uniwersytetu Medycznego. Zajmuje się leczeniem
             protetycznym oraz stomatologią zachowawczą z endodoncją i chirurgią
@@ -99,6 +101,7 @@ const Zespol = ({ data }) => {
         <InfoItemContent>
           <HighlightedHeading>Konrad Szczerbiński</HighlightedHeading>
           <p>Lekarz dentysta</p>
+          <img src={data.Rafal.publicURL} alt="" />
           <p>
             Absolwent Gdańskiego Uniwersytetu Medycznego. W czasie studiów mocno
             związany z Polskim Towarzystwem Studentów Stomatologii. Przez 3 lata

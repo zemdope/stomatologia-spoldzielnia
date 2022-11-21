@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const gatsbyRequiredRules = path.join(
   process.cwd(),
@@ -6,14 +6,14 @@ const gatsbyRequiredRules = path.join(
   'gatsby',
   'dist',
   'utils',
-  'eslint-rules',
-)
+  'eslint-rules'
+);
 
 module.exports = {
   siteMetadata: {
     title: `Stomatolog Spółdzielnia - Dentysta Gdańsk Wrzeszcz`,
     siteUrl: `https://stomatolog-spoldzielnia.pl`,
-    description: `Stomatolog spółdzielnia lekarska zaprasza do gabinetu na leczenie dentystyczne w Gdańsku. Leczenie kanałowe pod mikroskopem,rentgen zębów, estetyczne wypełnienia, pełna protetyka, zaawansowana chirurgia. Doświadczeni lekarze.`,
+    description: `Stomatolog spółdzielnia lekarska zaprasza do gabinetu na leczenie dentystyczne w Gdańsku. Leczenie kanałowe pod mikroskopem,rentgen zębów, estetyczne wypełnienia, pełna protetyka, zaawansowana chirurgia. Doświadczeni lekarze.`
   },
   plugins: [
     {
@@ -22,17 +22,17 @@ module.exports = {
         trackingIds: ['G-LJEB1M0PBV', '554-958-3782'],
 
         pluginConfig: {
-          head: true,
-        },
-      },
+          head: true
+        }
+      }
     },
 
     {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: 'Z38kOeIGKXzJgISu88CrmpDCtbNKxNG2Q2fYIO8AsBc',
-        spaceId: 'mam8kmxzslkd',
-      },
+        spaceId: 'mam8kmxzslkd'
+      }
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
@@ -43,16 +43,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/icons/logoManifest.svg',
-      },
+        icon: 'src/assets/icons/logoManifest.svg'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/assets/images/',
+        path: './src/assets/images/'
       },
-      __key: 'images',
+      __key: 'images'
     },
     {
       resolve: 'gatsby-plugin-root-import',
@@ -60,23 +60,23 @@ module.exports = {
         resolveModules: [path.join(__dirname, 'libs')],
         components: path.join(__dirname, 'src', 'components'),
         assets: path.join(__dirname, 'src', 'assets'),
-        helpers: path.join(__dirname, 'src', 'helpers'),
-      },
+        helpers: path.join(__dirname, 'src', 'helpers')
+      }
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: ['montserrat:300,400,500,700', 'cormorant garamond:300,500'],
-        display: 'swap',
-      },
+        display: 'swap'
+      }
     },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets\/icons/,
-        },
-      },
-    },
-  ],
-}
+          include: /assets\/icons/
+        }
+      }
+    }
+  ]
+};

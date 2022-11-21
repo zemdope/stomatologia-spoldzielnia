@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import {
   AdvantagesSection,
   Hero,
@@ -19,58 +19,100 @@ import {
   TeamSection,
   WelcomeSection,
   WelcomeSectionContent,
-  WelcomeSectionImage,
-} from 'assets/styles/pages/indexPage.styles'
-import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading'
-import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles'
+  WelcomeSectionImage
+} from 'assets/styles/pages/indexPage.styles';
+import { HighlightedHeading } from '../components/HighlightedHeading/HighlightedHeading';
+import { ContentWrapper } from '../components/ContentWrapper/ContentWrapper.styles';
 import {
   GoogleIconStyled,
   ShowcaseCorner,
   StarIconStyled,
-  WrapperIcons,
-} from '../assets/styles/pages/indexPage.styles'
-import { ContactForm } from '../components/ContactForm/ContactForm'
-import { AnimatePresence } from 'framer-motion'
-import SEO from '../components/SEO/SEO'
+  WrapperIcons
+} from '../assets/styles/pages/indexPage.styles';
+import { ContactForm } from '../components/ContactForm/ContactForm';
+import { AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO/SEO';
+import CookieConsent from 'react-cookie-consent';
 
 export const Head = () => (
   <>
     <SEO />
   </>
-)
+);
 
 const IndexPage = ({ data }) => {
   return (
     <AnimatePresence>
+      <CookieConsent
+        location='bottom'
+        buttonText='Zgoda'
+        style={{
+          background: '#ECEBE4',
+          color: '#444d55',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '0'
+        }}
+        buttonStyle={{
+          background: '#444d55',
+          color: '#fff',
+          broderRadius: '30px',
+          fontWeight: 600,
+          fontSize: '14px',
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          fontFamily: 'montserrat',
+          borderRadius: '3px',
+          margin: '5px 35px'
+        }}
+        expires={120}>
+        <p
+          style={{
+            margin: 0,
+            padding: 0,
+            fontSize: '14px',
+            fontWeight: 500
+          }}>
+          {' '}
+          Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym
+          poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich
+          użycie.{' '}
+          <Link
+            to='/polityka-prywatnosci'
+            style={{
+              textDecoration: 'none',
+              color: '#685641'
+            }}>
+            Polityka prywatności
+          </Link>
+        </p>
+      </CookieConsent>
       <ContentWrapper
         initial={{
           clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
-          transition: { duration: 0.4 },
+          transition: { duration: 0.4 }
         }}
         animate={{
           clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
 
-          transition: { duration: 0.8, delay: 0.6 },
+          transition: { duration: 0.8, delay: 0.6 }
         }}
         exit={{
           clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
-          transition: { duration: 0.2 },
-        }}
-      >
+          transition: { duration: 0.2 }
+        }}>
         <Hero>
           <HeroImage
             imageSource={data.hero.publicURL}
-            alt="uśmiechnięta kobieta"
-          >
+            alt='uśmiechnięta kobieta'>
             <HeroHeading
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
                 duration: 0.5,
                 ease: 'easeIn',
-                delay: 1.5,
-              }}
-            >
+                delay: 1.5
+              }}>
               <h1>
                 Stomatolog Spółdzielnia <br />
                 Lekarska{' '}
@@ -81,11 +123,10 @@ const IndexPage = ({ data }) => {
         </Hero>
         <WelcomeSection>
           <WelcomeSectionContent
-            position="topRight"
-            size="100px"
-            distance="30px"
-            offset="600"
-          >
+            position='topRight'
+            size='100px'
+            distance='30px'
+            offset='600'>
             <h2>Obsługa klienta</h2>
             <p>
               Profesjonalny stomatologiczny gabinet w sercu Gdańska. Młodzi,
@@ -101,12 +142,12 @@ const IndexPage = ({ data }) => {
           </WelcomeSectionContent>
 
           <WelcomeSectionImage
-            position="bottomLeft"
-            color="beige"
-            size="100px"
-            distance="30px"
+            position='bottomLeft'
+            color='beige'
+            size='100px'
+            distance='30px'
             imageSource={data.welcome.publicURL}
-            alt="obsługa pacjenta"
+            alt='obsługa pacjenta'
           />
         </WelcomeSection>
         <AdvantagesSection
@@ -114,10 +155,9 @@ const IndexPage = ({ data }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.5,
-            delay: 0.2,
-          }}
-        >
-          <HighlightedHeading width="50" isRight>
+            delay: 0.2
+          }}>
+          <HighlightedHeading width='50' isRight>
             Co nas Wyróżnia?
           </HighlightedHeading>
           <StyledList>
@@ -149,48 +189,48 @@ const IndexPage = ({ data }) => {
         <ShowcaseSection>
           <h2>Oferta</h2>
           <div>
-            <StyledButton as={Link} to="/cennik" isCentered>
+            <StyledButton as={Link} to='/cennik' isCentered>
               cennik usług
             </StyledButton>
-            <StyledButton as={Link} to="/uslugi" isCentered>
+            <StyledButton as={Link} to='/uslugi' isCentered>
               nasze usługi
             </StyledButton>
           </div>
           <ShowcaseGallery>
-            <ShowcaseImage src={data.grid1.publicURL} alt="zdjęcie uśmiechu" />
+            <ShowcaseImage src={data.grid1.publicURL} alt='zdjęcie uśmiechu' />
             <ShowcaseImage
               src={data.grid2.publicURL}
-              alt="badanie mikroskopem"
+              alt='badanie mikroskopem'
             />
             <ShowcaseImage
               src={data.grid3.publicURL}
-              alt="badanie mikroskopem"
+              alt='badanie mikroskopem'
             />
             <ShowcaseImage
               src={data.grid4.publicURL}
-              alt="propozycja leczenia"
+              alt='propozycja leczenia'
             />
             <ShowcaseCorner
-              position="bottomLeft"
-              size="100px"
-              distance="30px"
-              color="beige"
+              position='bottomLeft'
+              size='100px'
+              distance='30px'
+              color='beige'
             />
             <ShowcaseCorner
-              position="topRight"
-              size="100px"
-              distance="30px"
-              color="dark"
+              position='topRight'
+              size='100px'
+              distance='30px'
+              color='dark'
             />
           </ShowcaseGallery>
         </ShowcaseSection>
         <ServicesSection>
           <div>
-            <HighlightedHeading width="55">
+            <HighlightedHeading width='55'>
               Twój stomatolog w Gdańsku
             </HighlightedHeading>
 
-            <StyledLinkButton as={Link} to="/uslugi">
+            <StyledLinkButton as={Link} to='/uslugi'>
               Sprawdź pełen zakres naszych usług
             </StyledLinkButton>
           </div>
@@ -239,39 +279,39 @@ const IndexPage = ({ data }) => {
 
         <TeamSection>
           <div>
-            <HighlightedHeading isRight width="70">
+            <HighlightedHeading isRight width='70'>
               Poznaj nasz zespół
             </HighlightedHeading>
             <p>
               Dzięki doskonałej współpracy i przyjacielskiej atmosferze udało
               nam się stworzyć zespół dokosnały.
             </p>
-            <StyledLinkButton as={Link} to="/zespol">
+            <StyledLinkButton as={Link} to='/zespol'>
               Poznaj nas lepiej
             </StyledLinkButton>
           </div>
           <TeamImage
-            offset="700"
-            position="bottomLeft"
-            size="100px"
-            distance="30px"
-            color="beige"
+            offset='700'
+            position='bottomLeft'
+            size='100px'
+            distance='30px'
+            color='beige'
             imageSource={data.team.publicURL}
-            alt="zespół"
+            alt='zespół'
           />
           <TeamImage
-            position="topRight"
-            size="100px"
-            distance="30px"
-            color="dark"
+            position='topRight'
+            size='100px'
+            distance='30px'
+            color='dark'
             imageSource={data.team2.publicURL}
-            alt="certyfikat zadowolenia pacjentów"
+            alt='certyfikat zadowolenia pacjentów'
           />
         </TeamSection>
 
         <ReviewsSection>
           <div>
-            <HighlightedHeading width="70">
+            <HighlightedHeading width='70'>
               Zobacz opinie naszych Pacjentów
             </HighlightedHeading>
             <p>
@@ -321,8 +361,8 @@ const IndexPage = ({ data }) => {
         <ContactForm />
       </ContentWrapper>
     </AnimatePresence>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -351,6 +391,6 @@ export const query = graphql`
       publicURL
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

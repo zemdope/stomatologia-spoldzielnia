@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Hero = styled.div`
-width: calc(100% + 40px);
+  width: calc(100% + 40px);
   margin-left: -20px;
   height: 90vh;
   display: flex;
@@ -9,39 +9,40 @@ width: calc(100% + 40px);
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 50px;
-background:linear-gradient(
-   to top,
-  rgb(0 0 0 / .4), rgb(0 0 0 / 0)) ,url("${({ imageSource }) => imageSource}");
+  background: linear-gradient(to top, rgb(0 0 0 / 0.4), rgb(0 0 0 / 0)),
+    url('${({ imageSource }) => imageSource}');
   background-size: cover;
   background-position: 50% 0;
-  
+
   h1 {
     font-size: ${({ theme }) => theme.font.size.heading};
     margin: 0;
   }
-  h1, p {
+  p {
+    padding: 0 20px;
+  }
+  h1,
+  p {
     color: white;
     text-shadow: 0 0 20px black;
   }
-  
+
   ${({ theme }) => theme.mq.desktop} {
-    /* height: 800px; */
     width: calc(100% + 200px);
     margin-left: -100px;
 
-  p {
-    margin-bottom: 50px;
+    p {
+      margin-bottom: 50px;
+    }
   }
-  }
-
-  
-`
+`;
 
 export const InfoItem = styled.article`
   margin: 100px 0;
   img {
+    display: none;
     width: 100%;
-    height: fit-content;
+    height: intrinsic;
   }
   ${({ theme }) => theme.mq.desktop} {
     max-width: 1000px;
@@ -53,7 +54,9 @@ export const InfoItem = styled.article`
       width: 50%;
     }
     img {
+      display: block;
       width: 50%;
+      max-height: 550px;
     }
     &:nth-child(odd) {
       div {
@@ -68,7 +71,7 @@ export const InfoItem = styled.article`
       }
     }
   }
-`
+`;
 
 export const StyledLink = styled.a`
   display: block;
@@ -84,7 +87,7 @@ export const StyledLink = styled.a`
   text-transform: uppercase;
   color: black;
   text-decoration: none;
-`
+`;
 export const InfoItemContent = styled.div`
   h2 {
     margin: 10px 0;
@@ -95,6 +98,15 @@ export const InfoItemContent = styled.div`
     font-size: ${({ theme }) => theme.font.size.thumbnailSmall};
     font-weight: 500;
     color: ${({ theme }) => theme.color.darkBeige};
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: intrinsic;
+    ${({ theme }) => theme.mq.desktop} {
+      display: none;
+    }
   }
   a {
     display: flex;
@@ -109,4 +121,4 @@ export const InfoItemContent = styled.div`
   a:last-child {
     margin: 30px 0 50px;
   }
-`
+`;
