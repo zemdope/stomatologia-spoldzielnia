@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import throttle from 'lodash.throttle'
-import PropTypes from 'prop-types'
-import { CornerEffectWrapper } from './CornerEffect.styles'
+import React, { useEffect, useRef, useState } from 'react';
+import throttle from 'lodash.throttle';
+import PropTypes from 'prop-types';
+import { CornerEffectWrapper } from './AnimationCorner.styles';
 
 export const CornerEffect = ({
   children,
@@ -13,24 +13,24 @@ export const CornerEffect = ({
   offset = '400',
   ...props
 }) => {
-  const itemRef = useRef(null)
-  const [playState, setPlayState] = useState(false)
+  const itemRef = useRef(null);
+  const [playState, setPlayState] = useState(false);
 
   const handlePlayStateChange = throttle(() => {
-    const { top } = itemRef.current.getBoundingClientRect()
+    const { top } = itemRef.current.getBoundingClientRect();
     if (top < parseInt(offset, 10)) {
-      setPlayState(true)
+      setPlayState(true);
     }
-  }, 150)
+  }, 150);
 
   useEffect(() => {
-    handlePlayStateChange()
-    document.addEventListener('scroll', handlePlayStateChange)
+    handlePlayStateChange();
+    document.addEventListener('scroll', handlePlayStateChange);
 
     return () => {
-      document.removeEventListener('scroll', handlePlayStateChange)
-    }
-  }, [])
+      document.removeEventListener('scroll', handlePlayStateChange);
+    };
+  }, []);
 
   return (
     <CornerEffectWrapper
@@ -41,24 +41,23 @@ export const CornerEffect = ({
       pseudoelement={pseudoelement}
       playState={playState}
       ref={itemRef}
-      {...props}
-    >
+      {...props}>
       {children}
     </CornerEffectWrapper>
-  )
-}
+  );
+};
 
 CornerEffect.propTypes = {
   position: PropTypes.oneOf([
     'topLeft',
     'bottomLeft',
     'topRight',
-    'bottomRight',
+    'bottomRight'
   ]),
   size: PropTypes.string,
   offset: PropTypes.string,
   color: PropTypes.oneOf(['beige', 'steel', 'dark']),
   pseudoelement: PropTypes.oneOf(['after', 'before']),
   distance: PropTypes.string,
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};

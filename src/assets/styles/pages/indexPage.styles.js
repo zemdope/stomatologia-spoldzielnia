@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import arrowIcon from 'assets/styles/arrow.svg'
-import { CornerEffect } from '../../../components/CornerEffectProvider/CornerEffect'
-import GoogleIcon from '../../icons/google.svg'
-import StarIcon from '../../icons/star.svg'
-import { motion } from 'framer-motion'
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import arrowIcon from 'assets/styles/arrow.svg';
+import { CornerEffect } from '../../../components/AnimationCorner/AnimationCorner';
+import GoogleIcon from '../../icons/google.svg';
+import StarIcon from '../../icons/star.svg';
+import { motion } from 'framer-motion';
 export const StyledList = styled.ul`
   padding: 0;
   list-style: none;
@@ -22,7 +22,7 @@ export const StyledList = styled.ul`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
   }
-`
+`;
 
 export const StyledButton = styled(motion.button)`
   display: block;
@@ -32,36 +32,36 @@ export const StyledButton = styled(motion.button)`
   font-family: ${({ theme }) => theme.font.family.montserrat};
   border: 1px solid ${({ theme }) => theme.color.dark};
   background-color: transparent;
+  text-align: center;
   font-weight: 500;
   text-transform: uppercase;
   color: black;
   text-decoration: none;
-`
+`;
 
 export const StyledLinkButton = styled(Link)`
-position: relative;
+  position: relative;
   display: inline-block;
   margin: 5px 0 10px;
   font-family: ${({ theme }) => theme.font.family.montserrat};
   font-size: ${({ theme }) => theme.font.size.paragraph};
   color: ${({ theme }) => theme.color.dark};
   text-decoration: underline;
-  
-  
+
   &::after {
     position: absolute;
-     right: -35px;
+    right: -35px;
     top: 50%;
     content: '';
     width: 20px;
     height: 20px;
-    background-image: url("${arrowIcon}");
+    background-image: url('${arrowIcon}');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 50%;
     transform: translateY(-50%);
   }
-`
+`;
 
 export const Hero = styled.div`
   position: relative;
@@ -81,29 +81,28 @@ export const Hero = styled.div`
     height: ${({ theme }) => theme.size.desktopHeroHeight};
     margin-bottom: 0px;
   }
-`
+`;
 
 export const HeroImage = styled.div`
-position: relative;
- width: calc(100% + 40px); 
-   margin-left:-20px;
-   margin-right:-20px; 
-  
+  position: relative;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+
   max-width: 1200px;
   height: 100%;
-  background:linear-gradient(
-   to right,
-  rgb(0 0 0 / .82), rgb(0 0 0 / 0)) ,url("${({ imageSource }) => imageSource}");
+  background: linear-gradient(to right, rgb(0 0 0 / 0.82), rgb(0 0 0 / 0)),
+    url('${({ imageSource }) => imageSource}');
   background-position: 50% 100%;
   background-size: cover;
   opacity: 1;
-  
- ${({ theme }) => theme.mq.desktop} {
+
+  ${({ theme }) => theme.mq.desktop} {
     height: 800px;
     width: 100%;
     margin: 0 auto;
   }
-`
+`;
 
 export const HeroHeading = styled(motion.div)`
   position: absolute;
@@ -138,7 +137,7 @@ export const HeroHeading = styled(motion.div)`
   ${({ theme }) => theme.mq.tablet} {
     top: 20%;
   }
-`
+`;
 
 const StyledSection = styled.section`
   margin: 200px 0;
@@ -146,7 +145,7 @@ const StyledSection = styled.section`
   ${({ theme }) => theme.mq.desktop} {
     margin: 200px 0;
   }
-`
+`;
 
 export const WelcomeSection = styled(StyledSection)`
   padding: 0 20px;
@@ -162,7 +161,7 @@ export const WelcomeSection = styled(StyledSection)`
   ${({ theme }) => theme.mq.bigDesktop} {
     margin: 220px 0 100px;
   }
-`
+`;
 
 export const WelcomeSectionContent = styled(CornerEffect)`
   background-color: ${({ theme }) => theme.color.dark};
@@ -196,26 +195,25 @@ export const WelcomeSectionContent = styled(CornerEffect)`
   ${({ theme }) => theme.mq.bigDesktop} {
     top: 150px;
   }
-`
+`;
 
 export const WelcomeSectionImage = styled(CornerEffect)`
   position: relative;
-margin-top: 20px;
+  margin-top: 20px;
   width: 80%;
   height: 250px;
-
-  background-image: url("${({ imageSource }) => imageSource}");
+  background-image: url('${({ imageSource }) => imageSource}');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80% 20%;
-  
+
   ${({ theme }) => theme.mq.desktop} {
     z-index: -1;
     top: -80px;
     height: 500px;
     width: 70%;
   }
-`
+`;
 
 export const AdvantagesSection = styled(StyledSection)`
   ${({ theme }) => theme.mq.desktop} {
@@ -223,7 +221,7 @@ export const AdvantagesSection = styled(StyledSection)`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const ShowcaseSection = styled(StyledSection)`
   h2 {
@@ -249,7 +247,7 @@ export const ShowcaseSection = styled(StyledSection)`
       margin: 0 0 30px;
     }
   }
-`
+`;
 
 export const ShowcaseGallery = styled.div`
   margin: 55px 0 50px;
@@ -284,7 +282,7 @@ export const ShowcaseGallery = styled.div`
       grid-area: fourth;
     }
   }
-`
+`;
 
 export const ShowcaseCorner = styled(CornerEffect)`
   position: absolute;
@@ -292,7 +290,7 @@ export const ShowcaseCorner = styled(CornerEffect)`
   height: 100%;
   left: 0;
   top: 0;
-`
+`;
 
 export const ShowcaseImage = styled.img`
   margin: 10px 0;
@@ -304,7 +302,7 @@ export const ShowcaseImage = styled.img`
     height: 100%;
     margin: 0;
   }
-`
+`;
 
 export const ServicesSection = styled(StyledSection)`
   ${({ theme }) => theme.mq.desktop} {
@@ -330,18 +328,17 @@ export const ServicesSection = styled(StyledSection)`
       grid-template-columns: repeat(4, 1fr);
     }
   }
-`
+`;
 
 export const TeamImage = styled(CornerEffect)`
   margin-top: 30px;
   width: 100%;
   height: 300px;
-  background-image: url("${({ imageSource }) => imageSource}");
+  background-image: url('${({ imageSource }) => imageSource}');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-
-`
+`;
 
 export const TeamSection = styled(StyledSection)`
   ${TeamImage}:last-child {
@@ -378,7 +375,7 @@ export const TeamSection = styled(StyledSection)`
       max-width: 670px;
     }
   }
-`
+`;
 
 export const ReviewsSection = styled(StyledSection)`
   ${({ theme }) => theme.mq.desktop} {
@@ -402,7 +399,7 @@ export const ReviewsSection = styled(StyledSection)`
       grid-column: 1 / 2;
     }
   }
-`
+`;
 
 export const StyledReview = styled.div`
   position: relative;
@@ -414,16 +411,16 @@ export const StyledReview = styled.div`
     margin-top: 30px;
     font-weight: 700;
   }
-`
+`;
 
 export const GoogleIconStyled = styled(GoogleIcon)`
   width: 20px;
   height: 20px;
-`
+`;
 export const StarIconStyled = styled(StarIcon)`
   width: 20px;
   height: 20px;
-`
+`;
 export const WrapperIcons = styled.div`
   position: absolute;
   bottom: 20px;
@@ -433,4 +430,4 @@ export const WrapperIcons = styled.div`
   }
   ${StarIconStyled} {
   }
-`
+`;

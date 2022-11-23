@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 
-import FacebookIcon from 'assets/icons/facebookIcon.svg'
-import InstagramIcon from 'assets/icons/instagramIcon.svg'
+import FacebookIcon from 'assets/icons/facebookIcon.svg';
+import InstagramIcon from 'assets/icons/instagramIcon.svg';
 import {
   OuterWrapper,
   StyledBurger,
@@ -11,32 +11,32 @@ import {
   StyledSocialIcon,
   Wrapper,
   SocialIconWrapper,
-  WrapperDesktop,
-} from './Navigation.styles'
-import { motion } from 'framer-motion'
+  WrapperDesktop
+} from './Navigation.styles';
+import { motion } from 'framer-motion';
 
 export const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavigation = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const variants = {
     visible: {
       opacity: 1,
-      y: 0,
+      y: 0
     },
-    hidden: { opacity: 0, y: 40 },
-  }
+    hidden: { opacity: 0, y: 40 }
+  };
   const item = {
     visible: { scale: 1 },
-    hidden: { scale: 0 },
-  }
+    hidden: { scale: 0 }
+  };
 
   return (
     <OuterWrapper>
-      <Link to="/">
+      <Link to='/'>
         <StyledLogo />
       </Link>
       <StyledBurger isOpen={isOpen} onClick={toggleNavigation}>
@@ -46,88 +46,78 @@ export const Navigation = () => {
       </StyledBurger>
 
       <Wrapper isOpen={isOpen}>
-        <Link onClick={toggleNavigation} to="/">
+        <Link onClick={toggleNavigation} to='/'>
           <StyledLogo isMobile />
         </Link>
 
         <StyledNavigation>
           <ul>
             <motion.li
-              initial="hidden"
+              initial='hidden'
               animate={isOpen ? 'visible' : 'null'}
               transition={{ duration: 0.3, delay: 0.4 }}
-              variants={variants}
-            >
+              variants={variants}>
               <a
-                href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
-                onClick={toggleNavigation}
-              >
+                href='https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska'
+                onClick={toggleNavigation}>
                 Umów Wizytę
               </a>
             </motion.li>
 
             <motion.li
-              initial="hidden"
+              initial='hidden'
               animate={isOpen ? 'visible' : 'null'}
               transition={{ duration: 0.3, delay: 0.5 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/uslugi">
+              variants={variants}>
+              <Link onClick={toggleNavigation} to='/uslugi'>
                 Usługi
               </Link>
             </motion.li>
             <motion.li
-              initial="hidden"
+              initial='hidden'
               animate={isOpen ? 'visible' : 'null'}
               transition={{ duration: 0.3, delay: 0.6 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/cennik">
+              variants={variants}>
+              <Link onClick={toggleNavigation} to='/cennik'>
                 Cennik
               </Link>
             </motion.li>
             <motion.li
-              initial="hidden"
+              initial='hidden'
               animate={isOpen ? 'visible' : 'null'}
               transition={{ duration: 0.3, delay: 0.7 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/zespol">
+              variants={variants}>
+              <Link onClick={toggleNavigation} to='/zespol'>
                 Zespół
               </Link>
             </motion.li>
 
             <motion.li
-              initial="hidden"
+              initial='hidden'
               animate={isOpen ? 'visible' : 'null'}
               transition={{ duration: 0.3, delay: 0.8 }}
-              variants={variants}
-            >
-              <Link onClick={toggleNavigation} to="/kontakt">
+              variants={variants}>
+              <Link onClick={toggleNavigation} to='/kontakt'>
                 Kontakt
               </Link>
             </motion.li>
           </ul>
         </StyledNavigation>
         <SocialIconWrapper
-          initial="hidden"
+          initial='hidden'
           animate={isOpen ? 'visible' : 'null'}
           transition={{ duration: 0.3, delay: 1, type: 'tween' }}
-          variants={item}
-        >
+          variants={item}>
           <StyledSocialIcon isDark>
-            <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
+            <a href='https://www.facebook.com/stomatolog.spoldzielnialekarska'>
               <FacebookIcon />
             </a>
-          </StyledSocialIcon>
-          <StyledSocialIcon isDark>
-            <InstagramIcon />
           </StyledSocialIcon>
         </SocialIconWrapper>
       </Wrapper>
 
       <WrapperDesktop isOpen={isOpen}>
-        <Link onClick={toggleNavigation} to="/">
+        <Link onClick={toggleNavigation} to='/'>
           <StyledLogo />
         </Link>
 
@@ -135,31 +125,30 @@ export const Navigation = () => {
           <ul>
             <li>
               <a
-                href="https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska"
-                onClick={toggleNavigation}
-              >
+                href='https://www.znanylekarz.pl/placowki/stomatolog-spoldzielnia-lekarska'
+                onClick={toggleNavigation}>
                 Umów Wizytę
               </a>
             </li>
 
             <li>
-              <Link onClick={toggleNavigation} to="/uslugi">
+              <Link onClick={toggleNavigation} to='/uslugi'>
                 Usługi
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNavigation} to="/cennik">
+              <Link onClick={toggleNavigation} to='/cennik'>
                 Cennik
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNavigation} to="/zespol">
+              <Link onClick={toggleNavigation} to='/zespol'>
                 Zespół
               </Link>
             </li>
 
             <li>
-              <Link onClick={toggleNavigation} to="/kontakt">
+              <Link onClick={toggleNavigation} to='/kontakt'>
                 Kontakt
               </Link>
             </li>
@@ -167,15 +156,12 @@ export const Navigation = () => {
         </StyledNavigation>
         <SocialIconWrapper>
           <StyledSocialIcon isDark>
-            <a href="https://www.facebook.com/stomatolog.spoldzielnialekarska">
+            <a href='https://www.facebook.com/stomatolog.spoldzielnialekarska'>
               <FacebookIcon />
             </a>
-          </StyledSocialIcon>
-          <StyledSocialIcon isDark>
-            <InstagramIcon />
           </StyledSocialIcon>
         </SocialIconWrapper>
       </WrapperDesktop>
     </OuterWrapper>
-  )
-}
+  );
+};
