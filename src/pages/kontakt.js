@@ -13,7 +13,7 @@ import {
 } from '../assets/styles/pages/kontakt.styles';
 import { ContactForm } from '../components/ContactForm/ContactForm';
 
-import SimpleMap from '../components/Maps/SimpleMap';
+import SimpleMap from '../components/Map/SimpleMap';
 import SEO from '../components/SEO/SEO';
 
 export const Head = () => (
